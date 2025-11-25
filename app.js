@@ -1,0 +1,246 @@
+
+   // ===================================================================
+    // FAQ DATA - Pas dit aan met jouw eigen vragen en antwoorden
+    // ===================================================================
+    const FAQ = [];
+
+
+
+
+    // ===================================================================
+    // APPLICATIE CODE
+    // ===================================================================
+    
+    const $q = document.getElementById('q');
+    const $chips = document.getElementById('chips');
+    const $answer = document.getElementById('answer');
+    const $answerTitle = document.getElementById('answerTitle');
+    const $answerText = document.getElementById('answerText');
+    const $clear = document.getElementById('clear');
+    const $contact = document.getElementById('contact');
+    const $dbg = document.getElementById('dbg');
+    const $faqCount = document.getElementById('faqCount');
+    const $themeToggle = document.getElementById('themeToggle');
+    const $themeLabel = document.getElementById('themeLabel');
+    const $themeIcon = document.getElementById('themeIcon');
+
+    // Toon aantal FAQ items
+    $faqCount.textContent = FAQ.length;
+
+    // ===== Dark / Light mode toggle =====
+    function detectInitialTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') {
+        return saved;
+      }
+      // Fallback op systeemvoorkeur
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    }
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark');
+        $themeIcon.textContent = '🌞';
+        $themeLabel.textContent = 'Donker';
+      } else {
+        document.body.classList.remove('dark');
+        $themeIcon.textContent = '🌙';
+        $themeLabel.textContent = 'Licht';
+      }
+    }
+
+    let currentTheme = detectInitialTheme();
+    applyTheme(currentTheme);
+
+    $themeToggle.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', currentTheme);
+      applyTheme(currentTheme);
+    });
+
+    // Debug mode toggle (Ctrl+D)
+    let debugMode = false;
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key === 'd') {
+        e.preventDefault();
+        debugMode = !debugMode;
+        $dbg.style.display = debugMode ? 'block' : 'none';
+        if (debugMode) {
+          $dbg.textContent = 'Debug mode actief\nFAQ items: ' + FAQ.length + '\n\n' + 
+            'Eerste item:\n' + JSON.stringify(FAQ[0], null, 2);
+        }
+      }
+    });
+
+    function normalize(text) {
+      if (!text) return '';
+      return String(text)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '')
+        .trim();
+    }
+
+    function getSuggestions(query, limit = 6) {
+      const normalizedQuery = normalize(query);
+      
+      if (!normalizedQuery || normalizedQuery.length < 2) {
+        if (debugMode) $dbg.textContent = 'Query te kort (min. 2 karakters)';
+        return [];
+      }
+
+      const queryWords = normalizedQuery.split(/\s+/).filter(w => w.length >= 2);
+      
+      if (debugMode) console.log('Query woorden:', queryWords);
+
+      const scored = FAQ.map(row => {
+        const normalizedKeywords = normalize(row.keywords || '');
+        const normalizedVraag = normalize(row.vraag || '');
+        const normalizedAntwoord = normalize(row.antwoord || '');
+        const keywords = normalizedKeywords.split(/[;,]/).map(s => s.trim()).filter(Boolean);
+        
+        let score = 0;
+        const matches = [];
+
+        queryWords.forEach(qWord => {
+          keywords.forEach(kw => {
+            if (kw === qWord) {
+              score += 10;
+              matches.push(`exact: "${qWord}"`);
+            } else if (kw.includes(qWord)) {
+              score += 5;
+              matches.push(`partial: "${qWord}" in "${kw}"`);
+            } else if (qWord.includes(kw) && kw.length >= 3) {
+              score += 3;
+              matches.push(`contains: "${kw}"`);
+            }
+          });
+
+          if (normalizedVraag.includes(qWord)) {
+            score += 2;
+            matches.push(`in vraag: "${qWord}"`);
+          }
+
+          if (normalizedAntwoord.includes(qWord)) {
+            score += 0.5;
+          }
+        });
+
+        if (queryWords.length > 1 && matches.length >= queryWords.length) {
+          score += 5;
+        }
+
+        return { row, score, matches };
+      });
+
+      const results = scored
+        .filter(x => x.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit);
+
+      if (debugMode) {
+        $dbg.textContent = `Gevonden: ${results.length} suggesties\n\n` +
+          results.map(r => `Score ${r.score.toFixed(1)}: ${r.row.vraag}\n  → ${r.matches.join(', ')}`).join('\n\n');
+      }
+
+      return results.map(x => x.row);
+    }
+
+function renderChips(list) {
+  $chips.innerHTML = '';
+  
+  // Verberg het centrale antwoord element (we gebruiken het niet meer)
+  $answer.style.display = 'none';
+  
+  if (list.length === 0) {
+    const span = document.createElement('div');
+    span.className = 'muted';
+    span.textContent = 'Geen suggesties gevonden…';
+    $chips.appendChild(span);
+    return;
+  }
+
+  list.forEach(row => {
+    // Maak een container voor chip + antwoord
+    const container = document.createElement('div');
+    container.style.width = '100%';
+    
+    // Maak de chip
+    const chip = document.createElement('div');
+    chip.className = 'chip';
+    chip.textContent = '💡 ' + row.vraag;
+    chip.title = 'Klik om het antwoord te zien';
+    
+    // Maak het antwoord element voor deze specifieke chip
+    const answerBox = document.createElement('div');
+    answerBox.className = 'answer';
+    answerBox.style.display = 'none';
+    
+    const answerTitle = document.createElement('div');
+    answerTitle.className = 'answer-title';
+    answerTitle.textContent = row.vraag;
+    
+    const answerText = document.createElement('div');
+    answerText.innerHTML = row.antwoord || 'Geen antwoord beschikbaar.';
+    
+    answerBox.appendChild(answerTitle);
+    answerBox.appendChild(answerText);
+    
+    // Click event: verberg alle andere antwoorden, toon dit antwoord
+    chip.addEventListener('click', () => {
+      // Verberg alle andere antwoorden
+      document.querySelectorAll('.answer').forEach(a => {
+        if (a !== answerBox) {
+          a.style.display = 'none';
+        }
+      });
+      
+      // Toggle dit antwoord
+      if (answerBox.style.display === 'none') {
+        answerBox.style.display = 'block';
+      } else {
+        answerBox.style.display = 'none';
+      }
+    });
+    
+    // Voeg chip en antwoord toe aan container
+    container.appendChild(chip);
+    container.appendChild(answerBox);
+    
+    // Voeg container toe aan chips div
+    $chips.appendChild(container);
+  });
+}
+
+    let debounceTimer;
+    $q.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      $answer.style.display = 'none';
+      
+      debounceTimer = setTimeout(() => {
+        const suggestions = getSuggestions($q.value);
+        renderChips(suggestions);
+      }, 200);
+    });
+
+    $clear.addEventListener('click', () => {
+      $q.value = '';
+      $chips.innerHTML = '';
+      $answer.style.display = 'none';
+      $q.focus();
+    });
+
+    $contact.addEventListener('click', () => {
+      const question = $q.value.trim();
+      const subject = 'FAQ Vraag: ' + (question || 'Nieuwe vraag');
+      const body = question ? 'Mijn vraag:\n\n' + question : '';
+      
+      // Pas dit e-mailadres aan naar jouw support email
+      window.location.href = `mailto:support@jouwbedrijf.be?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    renderChips([]);
+    console.log('FAQ systeem geladen met', FAQ.length, 'vragen');
+  
