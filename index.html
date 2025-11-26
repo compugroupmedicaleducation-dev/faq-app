@@ -35,31 +35,33 @@
     </div>
   </div>
 
-  <!-- Search -->
-  <input autofocus id="q" placeholder="Typ een zoekwoord, bijv. CODA of EFACT" type="text" />
+  <!-- Search input -->
+  <input autofocus id="q" placeholder="Bijv. Hoe voeg ik een gebruiker toe?" type="text" />
 
-  <!-- Suggesties -->
+  <!-- Chips (suggesties) -->
   <div class="chips" id="chips"></div>
 
-  <!-- Antwoordblok (onder de chips – stijl van standalone versie) -->
-  <div class="answer-card" id="answer" style="display:none">
-      <div class="answer-title" id="answerTitle"></div>
-      <div class="answer-text" id="answerText"></div>
+  <!-- Answer -->
+  <div class="answer" id="answer" style="display:none">
+    <div class="answer-title" id="answerTitle"></div>
+    <div id="answerText"></div>
   </div>
 
   <div class="divider"></div>
 
+  <!-- Actions -->
   <div class="actions">
     <button id="clear">🔄 Opnieuw</button>
     <button class="primary" id="contact">✉️ Vraag niet gevonden? Neem contact op</button>
   </div>
 
-  <div class="muted">
-    💡 Tip: typ een woord en klik op een suggestie
-  </div>
+  <div class="muted">💡 Tip: Klik op een suggestie om het antwoord te zien</div>
+
+  <div class="debug" id="dbg" style="display:none"></div>
 
 </div>
 
+<!-- Geen FAQ data meer in de HTML -->
 <script src="./app.js"></script>
 
 </body>
