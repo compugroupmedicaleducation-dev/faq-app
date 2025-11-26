@@ -1,95 +1,80 @@
 // ===================================================================
-//  FAQ APP – laad FAQ-data dynamisch uit data.json
+//  FAQ APP – leest data.json en koppelt aan jouw HTML UI
 // ===================================================================
 
-let FAQ = []; // Wordt gevuld vanuit data.json
+let FAQ = [];
 
+// Start zodra pagina geladen is
 document.addEventListener("DOMContentLoaded", () => {
     loadFAQ();
 });
 
 // ---------------------------------------------------------------
-// 1. Laad data.json
+// 1. JSON laden
 // ---------------------------------------------------------------
 function loadFAQ() {
     fetch("data.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Kan data.json niet laden");
-            }
-            return response.json();
+        .then(res => {
+            if (!res.ok) throw new Error("Kan data.json niet laden");
+            return res.json();
         })
         .then(data => {
             FAQ = data;
-            initFAQ();
+            document.getElementById("faqCount").textContent = FAQ.length;
+            initSearch();
         })
-        .catch(error => {
-            console.error("Fout bij laden JSON:", error);
-            document.querySelector("#faq-container").innerHTML =
-                "<p style='color:red;'>Kon de FAQ-data niet laden.</p>";
+        .catch(err => {
+            console.error(err);
+            alert("Kon de FAQ-data niet laden.");
         });
 }
 
 // ---------------------------------------------------------------
-// 2. Initialiseer FAQ functionaliteit
+// 2. Zoek functionaliteit
 // ---------------------------------------------------------------
-function initFAQ() {
-    const searchInput = document.getElementById("searchInput");
-    const faqList = document.getElementById("faqList");
+function initSearch() {
+    const input = document.getElementById("q");
+    const chips = document.getElementById("chips");
 
-    renderFAQ(FAQ);
+    input.addEventListener("input", () => {
+        const query = input.value.toLowerCase().trim();
+        chips.innerHTML = "";
 
-    searchInput.addEventListener("input", () => {
-        const query = searchInput.value.toLowerCase();
-        const filtered = FAQ.filter(item =>
+        if (query.length === 0) {
+            hideAnswer();
+            return;
+        }
+
+        const matches = FAQ.filter(item =>
             item.vraag.toLowerCase().includes(query) ||
             item.antwoord.toLowerCase().includes(query) ||
-            item.keywords.some(kw => kw.toLowerCase().includes(query))
-        );
+            item.keywords.some(k => k.toLowerCase().includes(query))
+        ).slice(0, 8); // max 8 suggesties
 
-        renderFAQ(filtered);
-    });
-}
-
-// ---------------------------------------------------------------
-// 3. FAQ weergave
-// ---------------------------------------------------------------
-function renderFAQ(list) {
-    const faqList = document.getElementById("faqList");
-    faqList.innerHTML = "";
-
-    if (list.length === 0) {
-        faqList.innerHTML = "<p>Geen resultaten gevonden.</p>";
-        return;
-    }
-
-    list.forEach(item => {
-        const div = document.createElement("div");
-        div.classList.add("faq-item");
-
-        div.innerHTML = `
-            <button class="faq-question">${item.vraag}</button>
-            <div class="faq-answer">
-                <p>${item.antwoord}</p>
-            </div>
-        `;
-
-        faqList.appendChild(div);
-    });
-
-    bindFAQToggle();
-}
-
-// ---------------------------------------------------------------
-// 4. Open/dicht klappen van vragen
-// ---------------------------------------------------------------
-function bindFAQToggle() {
-    const questions = document.querySelectorAll(".faq-question");
-
-    questions.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const answer = btn.nextElementSibling;
-            answer.classList.toggle("open");
+        matches.forEach(item => {
+            const chip = document.createElement("button");
+            chip.className = "chip";
+            chip.textContent = item.vraag;
+            chip.onclick = () => showAnswer(item);
+            chips.appendChild(chip);
         });
+
+        if (matches.length === 0) hideAnswer();
     });
+}
+
+// ---------------------------------------------------------------
+// 3. Toon antwoord
+// ---------------------------------------------------------------
+function showAnswer(item) {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answerTitle").textContent = item.vraag;
+    document.getElementById("answerText").innerHTML = item.antwoord;
+}
+
+// ---------------------------------------------------------------
+// 4. Verberg antwoord
+// ---------------------------------------------------------------
+function hideAnswer() {
+    document.getElementById("answer").style.display = "none";
 }
