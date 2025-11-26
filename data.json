@@ -2,7 +2,7 @@
   {
     "id": "1a",
     "keywords": [
-      "meerdere verstrekkers;administratie;gebruikers koppelen;gebruiker;user;zorgverlener"
+      "meerdere verstrekkers;administratie;gebruikers koppelen;gebruiker;user;zorgverlener;ehealth;efact;eagreement"
     ],
     "vraag": "Wat als we met meerdere therapeuten in één praktijk werken, maar slechts één iemand doet de administratie?",
     "antwoord": "Via Extra,configuratie,gebruikers moeten de verstrekkers aan de gebruiker gekoppeld worden. Vervolgens zal je het vinkje toegang meerdere Ehealth sessies moeten aanvinken."
@@ -10,7 +10,7 @@
   {
     "id": "1b",
     "keywords": [
-      "meerdere verstrekkers;administratie;gebruikers koppelen;gebruiker;user;zorgverlener"
+      "meerdere verstrekkers;administratie;gebruikers koppelen;gebruiker;user;zorgverlener;ehealth;efact;eagreement"
     ],
     "vraag": "Hoe koppel ik meerdere verstrekkers aan één gebruiker in het systeem?",
     "antwoord": "Via Extra,configuratie,gebruikers moeten de verstrekkers aan de gebruiker gekoppeld worden. Vervolgens zal je het vinkje toegang meerdere Ehealth sessies moeten aanvinken."
@@ -18,7 +18,7 @@
   {
     "id": "1c",
     "keywords": [
-      "meerdere verstrekkers;administratie;gebruikers koppelen;gebruiker;user;zorgverlener"
+      "meerdere verstrekkers;administratie;gebruikers koppelen;gebruiker;user;zorgverlener;ehealth;efact;eagreement"
     ],
     "vraag": "Moet elke zorgverlener een aparte login hebben of kan één gebruiker de administratie doen voor iedereen?",
     "antwoord": "Via Extra,configuratie,gebruikers moeten de verstrekkers aan de gebruiker gekoppeld worden. Vervolgens zal je het vinkje toegang meerdere Ehealth sessies moeten aanvinken."
@@ -497,7 +497,7 @@
       "beurten;bestaande periode;andere kinesist;aantal sessies;reeds opgenomen;digitale opvolging;papieren versie;oxygen;ongeregistreerd"
     ],
     "vraag": "Mijn patiënt heeft al beurten",
-    "antwoord": "je doet dit hier"
+    "antwoord": "U zal manueel aantal ongeregistreerd in de periode moeten inbrengen."
   },
   {
     "id": "17a",
@@ -514,7 +514,7 @@
       "financiële gegevens"
     ],
     "vraag": "Waar kan ik mijn rekeningnummer koppelen wanneer ik e-Fact gebruik?",
-    "antwoord": "je doet dit hier"
+    "antwoord": "U kan deze koppelen via Bestanden, Zorgverleners, Info Zorgverlener, Mycarenet, Banknummer."
   },
   {
     "id": "17b",
@@ -531,7 +531,7 @@
       "financiële gegevens"
     ],
     "vraag": "Hoe kan ik mijn rekeningnummer wijzigen in e-Fact?",
-    "antwoord": "je doet dit hier"
+    "antwoord": "U kan deze koppelen via Bestanden, Zorgverleners, Info Zorgverlener, Mycarenet, Banknummer."
   },
   {
     "id": "17c",
@@ -548,7 +548,7 @@
       "financiële gegevens"
     ],
     "vraag": "Waar vind ik de betaalinstellingen of bankgegevens in mijn e-Fact-account?",
-    "antwoord": "je doet dit hier"
+    "antwoord": "U zal de zergverleners moeten koppelen aan uw transactietypes, dit kan via Basisbestanden,Transactietypes, Transactietype openen, Zorgverleners."
   },
   {
     "id": "17d",
@@ -565,7 +565,7 @@
       "financiële gegevens"
     ],
     "vraag": "Kan ik meerdere rekeningnummers koppelen aan mijn e-Fact-profiel?",
-    "antwoord": "neen, niet mogelijk"
+    "antwoord": "neen,Dit is helaas niet mogelijk"
   },
   {
     "id": "18a",
@@ -1257,7 +1257,7 @@
       "verstrekker niet bevoegd"
     ],
     "vraag": "Waarom ben ik volgens MyCareNet niet bevoegd voor deze verstrekking?",
-    "antwoord": "Er werd mogelijk een foutief RIZIV-nummer ingegeven. U kunt uw nummer controleren in uw verstrekkersfiche onder de tab ‘Info zorgverlener’ en vervolgens doorklikken op ‘RIZIV-nummers’. \r\nHet is ook aangeraden om uw nummer te vergelijken met de gegevens in de officiële RIZIV-databank: <a href=\"https://webappsa.riziv-inami.fgov.be/silverpages/\" target=\"_blank\">Silverpages – RIZIV/INAMI</a> \r\n\r\nHoud er rekening mee dat het RIZIV-nummer op verschillende kwalificatienummers kan eindigen: \r\n\r\n <b>• Eindigt het nummer op 517 </b>\r\nDan betreft het een licenciaat. Indien de kinesist werkzaam wil zijn in een praktijk of op verplaatsing, moet hij/zij bij het RIZIV een aanvraag indienen voor een nieuw RIZIV-nummer. \r\nDit geldt voor kinesitherapeuten die na 15 juni 2005 zijn gediplomeerd, erkend zijn door de FOD Volksgezondheid, geselecteerd zijn na het vergelijkend examen (of geldig ingeschreven wanneer het vergelijkend examen niet wordt georganiseerd) én niet over een praktijkkamer beschikken. \r\n\r\n <b>• Eindigt het nummer op 527</b> \r\nDan is er geen probleem. \r\nDit nummer geldt voor kinesitherapeuten die geselecteerd zijn na het vergelijkend examen (of geldig ingeschreven wanneer het vergelijkend examen niet wordt georganiseerd) en van wie het RIZIV een verklaring op erewoord heeft ontvangen over de praktijkkamer waarover zij beschikken."
+    "antwoord": "Er werd mogelijk een foutief RIZIV-nummer ingegeven. U kunt uw nummer controleren in uw verstrekkersfiche onder de tab ‘Info zorgverlener’ en vervolgens doorklikken op ‘RIZIV-nummers’. \r\nHet is ook aangeraden om uw nummer te vergelijken met de gegevens in de officiële RIZIV-databank: https://webappsa.riziv-inami.fgov.be/silverpages/ \r\n\r\nHoud er rekening mee dat het RIZIV-nummer op verschillende kwalificatienummers kan eindigen: \r\n\r\n• Eindigt het nummer op 517 \r\nDan betreft het een licenciaat. Indien de kinesist werkzaam wil zijn in een praktijk of op verplaatsing, moet hij/zij bij het RIZIV een aanvraag indienen voor een nieuw RIZIV-nummer. \r\nDit geldt voor kinesitherapeuten die na 15 juni 2005 zijn gediplomeerd, erkend zijn door de FOD Volksgezondheid, geselecteerd zijn na het vergelijkend examen (of geldig ingeschreven wanneer het vergelijkend examen niet wordt georganiseerd) én niet over een praktijkkamer beschikken. \r\n\r\n• Eindigt het nummer op 527 \r\nDan is er geen probleem. \r\nDit nummer geldt voor kinesitherapeuten die geselecteerd zijn na het vergelijkend examen (of geldig ingeschreven wanneer het vergelijkend examen niet wordt georganiseerd) en van wie het RIZIV een verklaring op erewoord heeft ontvangen over de praktijkkamer waarover zij beschikken."
   },
   {
     "id": "41b",
@@ -1950,7 +1950,7 @@
       "import;bankbestand;CODA;CGM Oxygen;automatisch;verwerken;OGM;transactietype"
     ],
     "vraag": "Hoe importeer ik bankbestanden en verwerk ik automatisch de bankberichten via de CODA-module?",
-    "antwoord": "<ol><li>Open <strong>Openstaande rekeningen</strong></li><li>Klik op <strong>Bankbestanden</strong></li><li>Selecteer de locatie en CODA-xml-bestanden</li><li>Klik op <strong>Openen</strong></li></ol>CGM Oxygen importeert de bestanden en koppelt automatisch betalingen via OGM-nummer en bedrag. Onverwerkte berichten kunnen nadien manueel gekoppeld worden."
+    "antwoord": "1. Open Openstaande rekeningen. 2. Klik op Bankbestanden. 3. Selecteer de locatie en CODA-xml-bestanden. 4. Klik op Openen. CGM Oxygen importeert de bestanden en koppelt automatisch betalingen via OGM-nummer en bedrag. Onverwerkte berichten kunnen nadien manueel gekoppeld worden."
   },
   {
     "id": "86a",
@@ -2425,7 +2425,7 @@
     "antwoord": "Een scan wordt via eAgreement gedeeld. Origineel bewaren tenzij digitaal voorschrift via Recip-e (vanaf 2025)."
   },
   {
-    "id": "a145a",
+    "id": "145a",
     "keywords": [
       "voorschrift;digitale facturatie;eAgreement;bewaarplicht"
     ],
@@ -2663,5 +2663,1517 @@
     ],
     "vraag": "Wat moet ik doen als ik problemen ondervind tijdens de installatie van CGM Oxygen?",
     "antwoord": "Ondervindt u problemen tijdens de installatie, aarzel dan niet om de helpdesk te contacteren. De helpdesk kan u helpen met alle aspecten van de installatie en configuratie."
+  },
+  {
+    "id": "175a",
+    "keywords": [
+      "agenda openen;dag;week"
+    ],
+    "vraag": "Hoe open ik een dag in de agenda?",
+    "antwoord": "Ga naar het hoofdscherm → klik op Registratie of Favorieten → klik op Agenda → selecteer links de agendaweergave (dag/werkweek) → gebruik de pijlen linksboven om naar andere dagen te navigeren."
+  },
+  {
+    "id": "176a",
+    "keywords": [
+      "agenda openen;dag;week"
+    ],
+    "vraag": "Hoe open ik een weekoverzicht in CGM Oxygen?",
+    "antwoord": "Klik in het hoofdscherm op Agenda → kies links voor werkweek → gebruik de grote pijlen linksboven om naar een vorige of volgende week te gaan."
+  },
+  {
+    "id": "177a",
+    "keywords": [
+      "nieuwe afspraak;agenda;patiënt"
+    ],
+    "vraag": "Hoe registreer ik een nieuwe afspraak voor een patiënt via de agenda?",
+    "antwoord": "Open de dag/week → klik in de agenda op het beginuur → typ de eerste 3 letters van de patiëntnaam → selecteer de patiënt → vul onderwerp of notities in in het detailvenster."
+  },
+  {
+    "id": "178a",
+    "keywords": [
+      "nieuwe afspraak;patiëntenlijst;slepen"
+    ],
+    "vraag": "Hoe registreer ik een afspraak via de patiëntenlijst?",
+    "antwoord": "Open de patiëntenlijst → selecteer patiënt → sleep patiënt naar het gewenste uur in de agenda → bij meerdere fiches verschijnt een keuzevenster → dubbelklik de afspraak om details verder in te vullen."
+  },
+  {
+    "id": "179a",
+    "keywords": [
+      "meerdere afspraken;patiënt;planning"
+    ],
+    "vraag": "Hoe registreer ik meerdere afspraken voor dezelfde patiënt?",
+    "antwoord": "Selecteer in de patiëntenlijst de cel links naast de patiëntnaam → klik in de agenda op meerdere beginuren → indien meerdere actieve fiches: selectievenster verschijnt."
+  },
+  {
+    "id": "181a",
+    "keywords": [
+      "meerdere afspraken;geavanceerde weergave"
+    ],
+    "vraag": "Hoe registreer ik meerdere afspraken in geavanceerde weergave?",
+    "antwoord": "Klik op de cel links naast de patiënt → open plusteken → kies actieve behandelingsfiche → klik meerdere beginuren → vergeet de selectie niet uit te vinken om afspraken voor anderen te kunnen maken."
+  },
+  {
+    "id": "182a",
+    "keywords": [
+      "nieuwe afspraak;details;nieuwknop"
+    ],
+    "vraag": "Hoe registreer ik een afspraak via selectie van details?",
+    "antwoord": "Open de agenda → klik op het beginuur → klik op de Nieuw-knop in de snelbalk (of rechtsklik → Nieuw) → selecteer afspraaktype, patiënt en actieve fiche/voorschrift → agenda, zorgverlener, kabinet en duur worden automatisch ingevuld maar zijn aanpasbaar."
+  },
+  {
+    "id": "183a",
+    "keywords": [
+      "nieuwe afspraak;rechtermuisknop"
+    ],
+    "vraag": "Hoe maak ik een nieuwe afspraak via het snelmenu?",
+    "antwoord": "Rechtsklik op het gewenste beginuur → kies Nieuw → selecteer afspraaktype, patiënt en fiche → details worden automatisch ingevuld en kunnen worden aangepast."
+  },
+  {
+    "id": "184a",
+    "keywords": [
+      "details afspraak;aanpassen"
+    ],
+    "vraag": "Hoe toon en wijzig ik de details van een afspraak?",
+    "antwoord": "Open de agenda → dubbelklik op de afspraak → in het geopende venster kun je alle gegevens bekijken, aanvullen of wijzigen."
+  },
+  {
+    "id": "185a",
+    "keywords": [
+      "afspraakdetails;bewerken"
+    ],
+    "vraag": "Hoe pas ik de afspraakgegevens aan?",
+    "antwoord": "Dubbelklik op de afspraak → detailvenster opent → breng gewenste wijzigingen aan in onderwerp, notities, type, duur of andere velden."
+  },
+  {
+    "id": "186a",
+    "keywords": [
+      "niet opgedaagd;annulering;boete;afspraak;agenda"
+    ],
+    "vraag": "Hoe registreer ik dat een patiënt niet is komen opdagen?",
+    "antwoord": "Klik op de afspraak → vink links ‘Niet opgedaagd’ aan → kies: Aanrekenen, Niet aanrekenen of Boete → indien Boete: vink reden (bv. Niet tijdig geannuleerd) → selecteer reden van afwezigheid (bv. ziekte) → afspraak wordt zwart gearceerd."
+  },
+  {
+    "id": "187a",
+    "keywords": [
+      "annulering;reden;sanctie;afspraak;agenda"
+    ],
+    "vraag": "Hoe registreer ik een geannuleerde afspraak?",
+    "antwoord": "Klik op de afspraak → vink ‘Annulering’ aan → kies tariefoptie (Aanrekenen / Niet aanrekenen / Boete) → selecteer reden uit de keuzelijst → afspraak wordt zwart gearceerd."
+  },
+  {
+    "id": "188a",
+    "keywords": [
+      "exclusief;blokkeren;tijdslot;agenda"
+    ],
+    "vraag": "Hoe vermijd ik dat er twee afspraken op hetzelfde uur worden geregistreerd?",
+    "antwoord": "Klik op het beginuur van de afspraak die exclusief moet blijven → vink links ‘Exclusief’ aan → exclusieve afspraak verschijnt met een sloticoon."
+  },
+  {
+    "id": "189a",
+    "keywords": [
+      "tijdslot blokkeren;exclusieve afspraak"
+    ],
+    "vraag": "Hoe blokkeer ik een tijdslot zodat er geen andere afspraak kan worden ingepland?",
+    "antwoord": "Klik op het gewenste beginuur → vink ‘Exclusief’ aan → sloticoon verschijnt in de agenda."
+  },
+  {
+    "id": "190a",
+    "keywords": [
+      "privéafspraak;afspraaktype;agenda"
+    ],
+    "vraag": "Hoe registreer ik een privéafspraak?",
+    "antwoord": "Klik op het beginuur → klik Nieuw (of rechtsklik → Nieuw) → kies afspraaktype ‘Privé’ → vul onderwerp in → voor volledige dag: vink ‘Volledige dag’ aan → privéafspraak krijgt een specifiek icoon."
+  },
+  {
+    "id": "191a",
+    "keywords": [
+      "privéafspraak;meerdere dagen"
+    ],
+    "vraag": "Hoe registreer ik een privéafspraak die meerdere dagen duurt?",
+    "antwoord": "Klik Nieuw → kies Privé → stel naast ‘Begin’ de startdag en -tijd in en naast ‘Einde’ de einddag en -tijd → afspraak verschijnt met privé-icoon."
+  },
+  {
+    "id": "192a",
+    "keywords": [
+      "valideren;prestatie;dagboek;agenda"
+    ],
+    "vraag": "Hoe valideer ik een afspraak als prestatie in het dagboek?",
+    "antwoord": "Klik op de afspraak → klik links op ‘Valideren’ (of rechtsklik → Valideren) → bij alternatieve discipline: kies pseudocode → afspraak krijgt een grijs vinkje → nomenclatuurcode verschijnt links → klik Dagboek om de gevalideerde prestatie te zien."
+  },
+  {
+    "id": "193a",
+    "keywords": [
+      "prestatie boeken;dagboek;agenda"
+    ],
+    "vraag": "Hoe zie ik de gevalideerde prestatie terug in het dagboek?",
+    "antwoord": "Klik op Dagboek in de werkbalk → de afspraak verschijnt daar als aangevinkte gevalideerde prestatie."
+  },
+  {
+    "id": "194a",
+    "keywords": [
+      "bilan;aanvullen;agenda"
+    ],
+    "vraag": "Hoe vervolledig ik het bilan via de agenda?",
+    "antwoord": "Klik op de afspraak → klik linksonder op het B-icoon (Bilan) → vul de tekstvelden in die verschijnen."
+  },
+  {
+    "id": "195a",
+    "keywords": [
+      "evolutie;aanvullen;agenda"
+    ],
+    "vraag": "Hoe vul ik evolutiegegevens rechtstreeks via de agenda aan?",
+    "antwoord": "Klik op de afspraak → klik op Ev (Evolutie) → vul de tekstvelden in."
+  },
+  {
+    "id": "196a",
+    "keywords": [
+      "rekening;factureren;agenda"
+    ],
+    "vraag": "Hoe maak ik een rekening van een patiënt via de agenda?",
+    "antwoord": "Alleen gevalideerde afspraken kunnen worden gefactureerd → klik op de gevalideerde afspraak → klik linksonder op Rek (Rekening) of rechtsklik → Rekening → venster ‘Rekening maken’ verschijnt → na facturatie krijgt de afspraak een blauw vinkje."
+  },
+  {
+    "id": "197a",
+    "keywords": [
+      "betaling;rekening;vinkje;agenda"
+    ],
+    "vraag": "Hoe zie ik dat de betaling geregistreerd is?",
+    "antwoord": "Een gefactureerde afspraak krijgt een blauw vinkje → wanneer betaling geregistreerd is wordt dit een groen vinkje."
+  },
+  {
+    "id": "198a",
+    "keywords": [
+      "toekomstige afspraken;patiënt"
+    ],
+    "vraag": "Hoe controleer ik toekomstige afspraken van een patiënt?",
+    "antwoord": "Klik op een afspraak van de patiënt → links verschijnt een lijst met toekomstige afspraken, met datum, uur en zorgverlener."
+  },
+  {
+    "id": "199a",
+    "keywords": [
+      "planning patiënt;agenda"
+    ],
+    "vraag": "Waar vind ik alle toekomstige afspraken van dezelfde patiënt?",
+    "antwoord": "Selecteer een afspraak van de patiënt → de volledige lijst van volgende afspraken wordt links weergegeven."
+  },
+  {
+    "id": "200a",
+    "keywords": [
+      "tabbladen;scherminhoud aanpassen;agenda"
+    ],
+    "vraag": "Hoe pas ik de weergave van tabbladen in de agenda aan?",
+    "antwoord": "Klik linksboven op de pijl naast Opties → kies ‘Scherminhoud aanpassen’ → sleep tabblad naar een van de richtingspijlen tot een blauw vlak verschijnt → tabblad wordt verplaatst."
+  },
+  {
+    "id": "201a",
+    "keywords": [
+      "schermlay-out herstellen;opties;agenda"
+    ],
+    "vraag": "Hoe herstel ik de standaardweergave van het agendavenster?",
+    "antwoord": "Klik linksboven op de pijl naast Opties → kies ‘Schermlay-out herstellen’ → standaardindeling wordt teruggezet."
+  },
+  {
+    "id": "202a",
+    "keywords": [
+      "behandelingsfiche;voorschrift;CGM Oxygen"
+    ],
+    "vraag": "Hoe open ik een nieuwe behandelingsfiche kinesitherapie met een voorschrift?",
+    "antwoord": "Open het dossier van de patiënt, klik op *Behandelingsfiche kinesitherapie*, kies *Nieuw* en vul de basisgegevens in zoals facturatieperiode en voorschrift."
+  },
+  {
+    "id": "203a",
+    "keywords": [
+      "behandelingsfiche;voorschriften;kinesitherapie"
+    ],
+    "vraag": "Hoe maak ik een behandelingsfiche met een kinesitherapievoorschrift?",
+    "antwoord": "Open een nieuwe behandelingsfiche, vul de diagnose, episode, zorgverlener en facturatieperiode in. Vul daarna de gegevens van het voorschrift in."
+  },
+  {
+    "id": "204a",
+    "keywords": [
+      "bestaande fiche openen;EPD;CGM Oxygen"
+    ],
+    "vraag": "Hoe open ik een bestaande behandelingsfiche?",
+    "antwoord": "Ga naar het patiëntendossier en klik op *Behandelingsfiche*. Kies de datum van de fiche die je wil openen."
+  },
+  {
+    "id": "205a",
+    "keywords": [
+      "voorschrift;datums;kinesitherapie"
+    ],
+    "vraag": "Welke datums horen bij een kinesitherapievoorschrift?",
+    "antwoord": "Waardedatum = start geldigheid. Contactdatum = eerste contact met patiënt. Registratiedatum = datum waarop het werd ingevoerd."
+  },
+  {
+    "id": "206a",
+    "keywords": [
+      "tarief;nomenclatuur;kinesitherapie"
+    ],
+    "vraag": "Hoe kies ik het juiste tarief voor een behandeling volgens de nomenclatuur?",
+    "antwoord": "In de behandelingsfiche: onder *Facturatieperiode* kies je de juiste nomenclatuur en selecteer je duur en tarief."
+  },
+  {
+    "id": "207a",
+    "keywords": [
+      "operatie;ingreep;E-pathologie"
+    ],
+    "vraag": "Voor welke patiënten moet een operatiedatum of ingreep geregistreerd worden?",
+    "antwoord": "Voor E‑pathologiepatiënten, voor patiënten op neonatale/intensieve diensten, of voor patiënten met een reanimatie of ingreep volgens de nomenclatuur."
+  },
+  {
+    "id": "208a",
+    "keywords": [
+      "operatie registreren;voorschrift"
+    ],
+    "vraag": "Hoe registreer ik een operatie in het voorschrift?",
+    "antwoord": "Open het voorschrift, kies een operatiedatum en selecteer de opname, reanimatie of ingreep in de lijst."
+  },
+  {
+    "id": "209a",
+    "keywords": [
+      "operatiegegevens;F-acuut;Acuut"
+    ],
+    "vraag": "Hoe vul ik operatiegegevens verder aan?",
+    "antwoord": "Open *Ingreep* in het dossier en vink aan of het om F‑acuut of Acuut gaat. Vul het aantal extra behandelingen dezelfde dag in indien nodig."
+  },
+  {
+    "id": "210a",
+    "keywords": [
+      "operatie verwijderen"
+    ],
+    "vraag": "Hoe verwijder ik operatiegegevens?",
+    "antwoord": "In het voorschrift: zet de operatiedatum op *Geen* en verwijder de ingreep. Verwijder daarna ook de ingreep in het menu *Ingreep*."
+  },
+  {
+    "id": "211a",
+    "keywords": [
+      "behandelingsplaats;aan huis"
+    ],
+    "vraag": "Waarom krijg ik de melding dat de behandelingsplaats naar 'Rechthebbende thuis' moet?",
+    "antwoord": "Wanneer je *Noodzaak behandeling aan huis* aanvinkt, moet de plaats automatisch op *Rechthebbende thuis* staan. Het systeem vraagt bevestiging hiervoor."
+  },
+  {
+    "id": "213a",
+    "keywords": [
+      "E-pathologie;2e zitting;motivering"
+    ],
+    "vraag": "Hoe druk ik de motivatie af voor een tweede zitting op dezelfde dag (E‑pathologie)?",
+    "antwoord": "In *Klinisch dossier kinesitherapie* kies je het bilan E‑pathologie, vul je de motivatie in en druk je het document af via het printericoon."
+  },
+  {
+    "id": "214a",
+    "keywords": [
+      "Acuut;2e zitting;verantwoording"
+    ],
+    "vraag": "Hoe druk ik de verantwoording af voor een tweede zitting op dezelfde dag (Acuut)?",
+    "antwoord": "In het voorschrift klik je op *Vermelding wijziging concept*, vul je de tekst in en druk je *Verantwoording 2e zitting per dag (Acuut)* af."
+  },
+  {
+    "id": "215a",
+    "keywords": [
+      "afwijkingen voorschrift;wijziging"
+    ],
+    "vraag": "Hoe noteer ik afwijkingen van het voorschrift van de arts?",
+    "antwoord": "In het voorschrift klik je op *Vermelding wijziging concept* en noteer je de afwijking, zoals een andere behandelfrequentie."
+  },
+  {
+    "id": "217a",
+    "keywords": [
+      "behandelingsperiode registreren"
+    ],
+    "vraag": "Hoe maak ik een nieuwe behandelingsperiode aan bij een eerste pathologie?",
+    "antwoord": "De periode wordt automatisch aangemaakt bij het boeken van de eerste prestatie."
+  },
+  {
+    "id": "218a",
+    "keywords": [
+      "periode bekijken;aanpassen"
+    ],
+    "vraag": "Hoe geef ik een behandelingsperiode weer?",
+    "antwoord": "Via *Periode kinesitherapie*, via de EPD‑lijst, via de patiëntenfiche of via *Prestaties* kun je de periode openen."
+  },
+  {
+    "id": "219a",
+    "keywords": [
+      "periode pauze;CGM Oxygen"
+    ],
+    "vraag": "Wanneer zet ik een behandelingsperiode op pauze?",
+    "antwoord": "Wanneer de periode afgelopen is. Dit zorgt ervoor dat nieuwe prestaties in een nieuwe periode terechtkomen."
+  },
+  {
+    "id": "220a",
+    "keywords": [
+      "dossierkosten;registratie"
+    ],
+    "vraag": "Hoe registreer ik dossierkosten?",
+    "antwoord": "In de behandelingsperiode kies je de datum, plaats en zorgverlener. Nadien kan u in het prestatievenster de prestatieboeken en klikken op het groen boekje in de kolom DK,"
+  },
+  {
+    "id": "221a",
+    "keywords": [
+      "dossierkosten via agenda"
+    ],
+    "vraag": "Hoe registreer ik dossierkosten via de agenda?",
+    "antwoord": "Klik op een gevalideerde afspraak en activeer het DK‑icoon. Dit werkt voor pathologieën courant, F‑acuut, F‑chronisch en E‑pathologie."
+  },
+  {
+    "id": "222a",
+    "keywords": [
+      "verslag arts;aanmaken"
+    ],
+    "vraag": "Hoe maak ik een verslag voor de arts?",
+    "antwoord": "Je kunt een verslag maken via hetprintericoon van het bilan. (Links bovenaan het venster)."
+  },
+  {
+    "id": "223a",
+    "keywords": [
+      "verslag arts via agenda"
+    ],
+    "vraag": "Hoe druk ik een verslag arts af vanuit de agenda?",
+    "antwoord": "Klik op een gevalideerde afspraak, open het bilan‑icoon en druk het verslag af via het printericoon."
+  },
+  {
+    "id": "224a",
+    "keywords": [
+      "nieuwe patiënt;INSZ;eID"
+    ],
+    "vraag": "Hoe maak ik een nieuwe patiënt aan?",
+    "antwoord": "Klik op Patiënten > Nieuwe patiënt. Vul naam,voornaam en INSZ in of lees de eID in; geboortedatum en taal vullen automatisch in."
+  },
+  {
+    "id": "225a",
+    "keywords": [
+      "route;adres;Google Maps"
+    ],
+    "vraag": "Hoe toon ik de route naar het domicilie van de patiënt?",
+    "antwoord": "Open de patiëntenfiche > Adresgegevens > klik op het kaart-icoon naast het adres. Google opent de route."
+  },
+  {
+    "id": "226a",
+    "keywords": [
+      "eID;identiteitskaart;inlezen"
+    ],
+    "vraag": "Hoe lees ik de eID van de patiënt in?",
+    "antwoord": "Open patiëntenfiche > tab eID > klik op Inlezen. Steek de kaart in de lezer."
+  },
+  {
+    "id": "227a",
+    "keywords": [
+      "persoonlijke gegevens;INSZ;geboortedatum"
+    ],
+    "vraag": "Hoe registreer ik persoonlijke gegevens?",
+    "antwoord": "In Algemene info naam en INSZ ingeven; geboortedatum en geslacht vullen automatisch in."
+  },
+  {
+    "id": "228a",
+    "keywords": [
+      "adres;domicilie;gemeente"
+    ],
+    "vraag": "Hoe registreer ik adresgegevens?",
+    "antwoord": "Onder Adresgegevens straat, nummer en gemeente ingeven. Voor extra adres: klik op Nieuw."
+  },
+  {
+    "id": "229a",
+    "keywords": [
+      "verzorgingsadres;adres toevoegen"
+    ],
+    "vraag": "Hoe voeg ik een verzorgingsadres toe?",
+    "antwoord": "Adresgegevens > Nieuw > adrestype kiezen > straat en gemeente invullen."
+  },
+  {
+    "id": "230a",
+    "keywords": [
+      "nieuwe gemeente;postcode"
+    ],
+    "vraag": "Hoe voeg ik een nieuwe gemeente toe?",
+    "antwoord": "Tik de eerste letters in; bij geen resultaat verschijnt een venster om een nieuwe gemeente in te voeren en op te slaan."
+  },
+  {
+    "id": "231a",
+    "keywords": [
+      "contactgegevens;telefoon;email;patiëntenfiche"
+    ],
+    "vraag": "Hoe registreer ik contactgegevens?",
+    "antwoord": "Onder Communicatie telefoon, gsm of e-mail invullen. Voor extra gegevens: klik op Nieuw."
+  },
+  {
+    "id": "232a",
+    "keywords": [
+      "mutualiteit;inschrijvingsnummer;patiëntenfiche"
+    ],
+    "vraag": "Hoe registreer ik mutualiteitsgegevens?",
+    "antwoord": "Onder Mutualiteitsgegevens mutualiteit zoeken, inschrijvingsnummer en codes invullen. Wanneer u beschikt over een Ehealth certificaat kan u deze gegevens automatisch ophalen door te klikken op de knop opvragen."
+  },
+  {
+    "id": "233a",
+    "keywords": [
+      "artsenlijst;zorgverleners;import;patiëntenfiche"
+    ],
+    "vraag": "Hoe worden artsen geïmporteerd?",
+    "antwoord": "De lijst komt uit eHealth (CoBRHA) of uit de RIZIV-lijst wanneer eHealth niet actief is."
+  },
+  {
+    "id": "234a",
+    "keywords": [
+      "huisarts;behandelende arts;patiëntenfiche"
+    ],
+    "vraag": "Hoe registreer ik de arts van de patiënt?",
+    "antwoord": "Bij Relaties naam van arts intikken en selecteren uit de lijst."
+  },
+  {
+    "id": "235a",
+    "keywords": [
+      "contactpersonen;relaties;patiëntenfiche"
+    ],
+    "vraag": "Hoe voeg ik contactpersonen toe?",
+    "antwoord": "Relaties > Nieuw > type kiezen en naam intikken."
+  },
+  {
+    "id": "236a",
+    "keywords": [
+      "nieuw contact;relaties;patiëntenfiche"
+    ],
+    "vraag": "Hoe registreer ik contactpersonen die nog niet bestaan?",
+    "antwoord": "Bij geen zoekresultaat verschijnt een venster om een nieuw contact volledig aan te maken."
+  },
+  {
+    "id": "237a",
+    "keywords": [
+      "wanbetaler;contant;patiëntenfiche"
+    ],
+    "vraag": "Hoe duid ik contante betaling of wanbetaling aan?",
+    "antwoord": "In Diversen bij Financiële eigenschappen vink Contante betaler of Wanbetaler aan."
+  },
+  {
+    "id": "238a",
+    "keywords": [
+      "categorie;diversen;patiëntenfiche"
+    ],
+    "vraag": "Hoe duid ik een patiëntencategorie aan?",
+    "antwoord": "In Diversen een categorie aanvinken."
+  },
+  {
+    "id": "239a",
+    "keywords": [
+      "nieuwe categorie;patiëntenfiche"
+    ],
+    "vraag": "Hoe maak ik een nieuwe patiëntencategorie?",
+    "antwoord": "In Diversen via de 3 puntjes > Nieuw een nieuwe categorie aanmaken."
+  },
+  {
+    "id": "240a",
+    "keywords": [
+      "bewerken;patiëntenfiche"
+    ],
+    "vraag": "Hoe bewerk ik patiëntgegevens?",
+    "antwoord": "Open de patiëntenfiche via Patiënten en pas de velden aan."
+  },
+  {
+    "id": "241a",
+    "keywords": [
+      "verwijderen;adres;contact;patiëntenfiche"
+    ],
+    "vraag": "Hoe verwijder ik adres-, contact- of bankgegevens?",
+    "antwoord": "Klik op het rode kruisje naast het item dat je wil verwijderen."
+  },
+  {
+    "id": "242a",
+    "keywords": [
+      "mutualiteit wijziging;historiek;patiëntenfiche"
+    ],
+    "vraag": "Hoe registreer ik wijziging mutualiteit?",
+    "antwoord": "In Mutualiteitsgegevens op Historiek klikken en nieuwe inschrijvingsperiode toevoegen."
+  },
+  {
+    "id": "243a",
+    "keywords": [
+      "provincie;land;adresgegevens;patiëntenfiche"
+    ],
+    "vraag": "Hoe registreer ik provincie of land?",
+    "antwoord": "Onder Adresgegevens op Provincie of Land klikken en waarde selecteren."
+  },
+  {
+    "id": "244a",
+    "keywords": [
+      "OxyCity;toegang;berichten;patiëntenfiche"
+    ],
+    "vraag": "Hoe geef ik patiënt toegang tot mijn agenda?",
+    "antwoord": "In tab OxyCity Toegang aanvinken en berichtinstellingen op Ja zetten."
+  },
+  {
+    "id": "245a",
+    "keywords": [
+      "extra info;patiënt"
+    ],
+    "vraag": "Hoe voeg ik bijkomende info toe?",
+    "antwoord": "Tab Info openen en tekst invoeren."
+  },
+  {
+    "id": "246a",
+    "keywords": [
+      "deactiveren;patiënt"
+    ],
+    "vraag": "Hoe deactiveer ik een patiënt?",
+    "antwoord": "Via patiëntenlijst of fiche op de groene pijl klikken; wordt dan oranje (passief)."
+  },
+  {
+    "id": "247a",
+    "keywords": [
+      "actieve patiënten;lijst"
+    ],
+    "vraag": "Hoe toon ik alle actieve patiënten?",
+    "antwoord": "In de patiëntenlijst status op Actief zetten."
+  },
+  {
+    "id": "248a",
+    "keywords": [
+      "patiëntenfiche verwijderen"
+    ],
+    "vraag": "Hoe verwijder ik een patiëntenfiche?",
+    "antwoord": "Op rood kruis klikken; gegevens worden naar Onderhoud gegevens verplaatst."
+  },
+  {
+    "id": "249a",
+    "keywords": [
+      "weergave;tabbladen; patient"
+    ],
+    "vraag": "Hoe wijzig ik de weergave van de patiëntenfiche?",
+    "antwoord": "Via Scherminhoud > Aanpassen tabbladen verplaatsen of verbergen."
+  },
+  {
+    "id": "250a",
+    "keywords": [
+      "prestaties;voorschrift;venster openen"
+    ],
+    "vraag": "Hoe open ik het venster om prestaties te registreren?",
+    "antwoord": "Open het dossier van de patiënt en klik op Prestaties via Administratief, de EPD-lijst of de werkbalk."
+  },
+  {
+    "id": "251a",
+    "keywords": [
+      "prestatie registreren;kalender;voorschrift"
+    ],
+    "vraag": "Hoe registreer ik een prestatie voor een voorschrift in het prestatievenster?",
+    "antwoord": "In Prestaties: selecteer het voorschrift en de periode, klik op de kalenderdata. De prestaties verschijnen automatisch."
+  },
+  {
+    "id": "252a",
+    "keywords": [
+      "prestatie verwijderen;afrekenen"
+    ],
+    "vraag": "Hoe verwijder ik een prestatie in het prestatievenster?",
+    "antwoord": "Selecteer de prestatie in de lijst en klik op het rode kruisje. Alleen niet-afgerekende prestaties kunnen verwijderd worden."
+  },
+  {
+    "id": "253a",
+    "keywords": [
+      "loonberekening;module activeren;licentie"
+    ],
+    "vraag": "Hoe activeer ik de module Loonberekening?",
+    "antwoord": "Ga naar Extra > Licentie > tab Onderdelen en zet Loonberekening op 'Aan'."
+  },
+  {
+    "id": "254a",
+    "keywords": [
+      "looninstelling;percentages;forfait"
+    ],
+    "vraag": "Hoe bepaal ik een looninstelling voor een zorgverlener?",
+    "antwoord": "Onder Basisbestanden > Lonen maak je een nieuwe looninstelling aan en vul je per categorie of prestatie het juiste percentage of forfait in."
+  },
+  {
+    "id": "255a",
+    "keywords": [
+      "looninstelling activeren;zorgverlener;info"
+    ],
+    "vraag": "Hoe activeer ik een looninstelling voor een zorgverlener?",
+    "antwoord": "Open de zorgverlenerfiche > Info zorgverlener > kies de discipline en activeer loonberekening. Onder Lonen selecteer je de looninstelling en periode."
+  },
+  {
+    "id": "256a",
+    "keywords": [
+      "loonberekening uitvoeren;periodiek;rekeningen"
+    ],
+    "vraag": "Hoe voer ik een loonberekening uit?",
+    "antwoord": "Ga naar Financieel > Erelonen > Periodieke loonberekening, selecteer zorgverlener, periode en rekeningtypes, klik op de loep en daarna op Toepassen."
+  },
+  {
+    "id": "257a",
+    "keywords": [
+      "standaard begindatum;loonberekening"
+    ],
+    "vraag": "Hoe stel ik een standaardbegindatum in voor de loonberekening?",
+    "antwoord": "In Periodieke loonberekening klik je op Opties en kies je Standaard loonberekening startdatum om een vaste begindatum te selecteren."
+  },
+  {
+    "id": "258a",
+    "keywords": [
+      "gecorrigeerde rekeningen;loonberekening"
+    ],
+    "vraag": "Hoe verwerkt het systeem gecorrigeerde rekeningen?",
+    "antwoord": "Bij een volgende loonberekening rekent het systeem automatisch bij of af op basis van aangepaste of verwijderde rekeningen."
+  },
+  {
+    "id": "259a",
+    "keywords": [
+      "loonberekening afdrukken;overzicht"
+    ],
+    "vraag": "Hoe druk ik een loonberekening af?",
+    "antwoord": "Na het uitvoeren van de loonberekening kies je in het printericoon voor 'Volgens rekening', 'Rekening met prestaties' of 'Volgens prestaties'."
+  },
+  {
+    "id": "260a",
+    "keywords": [
+      "verzamelstaat;aanmaken"
+    ],
+    "vraag": "Hoe maak ik een nieuwe verzamelstaat van loonberekeningen?",
+    "antwoord": "In Financieel > Erelonen > Verzamelstaat loonberekening selecteer je schuldenaar, jaar en loonberekeningen en klik je op Toepassen."
+  },
+  {
+    "id": "261a",
+    "keywords": [
+      "verzamelstaat afdrukken;overzicht"
+    ],
+    "vraag": "Hoe druk ik een verzamelstaat af?",
+    "antwoord": "Open Verzamelstaat loonberekening en selecteer via het printericoon 'Overzicht loonberekeningen'."
+  },
+  {
+    "id": "261a",
+    "keywords": [
+      "fiche 281.50;afdrukken"
+    ],
+    "vraag": "Hoe druk ik fiche 281.50 af?",
+    "antwoord": "Na aanmaak van de verzamelstaat klik je op het printericoon en kies je 'Fiche 281.50'. Het opent automatisch in de tekstverwerker."
+  },
+  {
+    "id": "262a",
+    "keywords": [
+      "MFA;multifactorauthenticatie;OxyBoxy"
+    ],
+    "vraag": "Hoe stel ik multifactorauthenticatie in OxyBoxy in?",
+    "antwoord": "Bij het inloggen verschijnt eerst een banner en later een pop‑up om MFA te activeren. Volg de wizard en kies één van de drie beschikbare methodes."
+  },
+  {
+    "id": "263a",
+    "keywords": [
+      "CSAM;eID;itsme;inloggen;Oxyboxy"
+    ],
+    "vraag": "Hoe werkt multifactorauthenticatie met CSAM, eID of itsme?",
+    "antwoord": "Kies CSAM/eID/itsme in de wizard. Daarna kun je rechtstreeks aanmelden via CSAM zonder gebruikersnaam en wachtwoord."
+  },
+  {
+    "id": "264a",
+    "keywords": [
+      "authenticatorapp;verificatiecode;Oxyboxy"
+    ],
+    "vraag": "Hoe gebruik ik een authenticatorapp voor MFA?",
+    "antwoord": "Kies ‘Authenticatorapp’ in de wizard. Bij het inloggen voer je een code in die door de app wordt gegenereerd. Je kunt je browser als vertrouwd markeren."
+  },
+  {
+    "id": "265a",
+    "keywords": [
+      "e‑mail;verificatiecode;MFA;Oxyboxy"
+    ],
+    "vraag": "Hoe werkt multifactorauthenticatie via e‑mail?",
+    "antwoord": "Kies ‘E‑mail’ in de wizard. Na inloggen krijg je een unieke verificatiecode via e‑mail. Deze methode is minder veilig."
+  },
+  {
+    "id": "266a",
+    "keywords": [
+      "browser vertrouwen;extra stap;Oxyboxy"
+    ],
+    "vraag": "Moet ik bij elke Oxyboxylogin opnieuw een code ingeven?",
+    "antwoord": "Nee, je kunt je browser als vertrouwd markeren zodat je niet telkens opnieuw de extra MFA‑stap moet uitvoeren."
+  },
+  {
+    "id": "267a",
+    "keywords": [
+      "licentie;zorgverleners;actief zetten"
+    ],
+    "vraag": "Hoe controleer ik hoeveel zorgverleners ik kan toevoegen?",
+    "antwoord": "Ga naar Extra > Licentie > Modules. Daar ziet u hoeveel zorgverleners uw licentie toelaat. Via Bestanden > Zorgverleners ziet u hoeveel er actief zijn."
+  },
+  {
+    "id": "268a",
+    "keywords": [
+      "pauzeren;zorgverlener;licentie;vervanger"
+    ],
+    "vraag": "Wat doe ik als mijn nieuwe collega een andere vervangt?",
+    "antwoord": "Pauzeer de vertrekkende zorgverlener in de lijst. Zo hoeft u geen verkoopdienst te contacteren als hij/zij niet meer actief is."
+  },
+  {
+    "id": "269a",
+    "keywords": [
+      "nieuwe collega;zorgverlenerfiche;aanmaken"
+    ],
+    "vraag": "Hoe maak ik een nieuwe zorgverlenerfiche aan?",
+    "antwoord": "Ga naar Bestanden > Zorgverleners > Nieuw. Vul naam, voornaam, adres, telefoon en RIZIV-nummer in."
+  },
+  {
+    "id": "270a",
+    "keywords": [
+      "type behandelingsfiche;zelfstandig;geconventioneerd"
+    ],
+    "vraag": "Welke instellingen moet ik aanduiden in Info zorgverlener?",
+    "antwoord": "Selecteer het type behandelingsfiche en duid aan of de verstrekker zelfstandig of niet-geconventioneerd werkt en of loonberekening nodig is."
+  },
+  {
+    "id": "271a",
+    "keywords": [
+      "loonberekening;percentage instellen"
+    ],
+    "vraag": "Hoe stel ik de loonberekening in voor een nieuwe collega?",
+    "antwoord": "Ga naar bestanden, Zorgverleners, Open fiche, Klik op tab Info zorgverlener, Vink Loonberekening aan, kies het percentage voor honorarium en supplementen en klik op Toevoegen in de tab Lonen. Voeg een looninstelling toe als die nog niet bestaat."
+  },
+  {
+    "id": "272a",
+    "keywords": [
+      "gebruikersaccount;aanmaken"
+    ],
+    "vraag": "Hoe maak ik een gebruikersaccount voor mijn nieuwe collega?",
+    "antwoord": "Ga naar Extra > Configuratie > Gebruiker > Creëer. Vul naam, paswoord en het profiel Klinische gebruiker of Hoofdgebruiker in."
+  },
+  {
+    "id": "273a",
+    "keywords": [
+      "agenda;configureren"
+    ],
+    "vraag": "Hoe configureer ik de agenda van een nieuwe collega?",
+    "antwoord": "Ga naar Extra > Configuratie > Agendas>Klik op nieuw,selecteer de collega, kies kabinet en standaardzorgverlener, en selecteer de afspraaktypes."
+  },
+  {
+    "id": "274a",
+    "keywords": [
+      "printer;getuigschriften;configuratie"
+    ],
+    "vraag": "Hoe stel ik de printer in voor getuigschriften van een collega?",
+    "antwoord": "Als de collega eigen getuigschriften gebruikt, maak dan via Extra > Configuratie > Printer een nieuwe printerconfiguratie aan met zijn/haar gegevens."
+  },
+  {
+    "id": "275a",
+    "keywords": [
+      "Systeemvereisten;Oxygen"
+    ],
+    "vraag": "Wat zijn de systeemvereisten van Oxygen?",
+    "antwoord": "Aangeraden Serververeisten: (Het is belangrijk om rekening te houden met de architectuur van de processor, met name GEEN ARM-processor: M1, M2, M3-chips) \r\n\r\nBesturingssysteem: De server moet een volwaardige Windows-pc zijn, met Windows 11 (Home of Pro) en 64-bits ondersteuning. \r\nProcessor: recente i7 of i9 processor voor een server. \r\nGeheugen (RAM): We raden 16 GB RAM aan. \r\nHarde schijf (SSD): \r\n\r\nWe adviseren een harde schijf van minimaal 1000 GB \r\nControleer de beschikbare vrije ruimte op de harde schijf en zorg ervoor dat er minimaal 80 GB beschikbaar is. \r\nInternetverbinding: \r\n\r\nZorg voor een stabiele vaste internetverbinding. \r\nMonitorresolutie: \r\n\r\nDe monitor moet een resolutie hebben van 1920x1080 voor optimale weergave. \r\nClientvereisten (Windows en macOS): \r\n\r\nWindows-client \r\nBesturingssysteem: Windows 10, 11 of hoger (Home of Pro) en 64-bits ondersteuning. \r\nProcessor: Recente i5 of beter is voldoende \r\nGeheugen (RAM): Minimaal 8 GB RAM. \r\nmacOS-client: \r\nGeheugen (RAM): Minimaal 8 GB RAM. Aangeraden: 16 GB RAM. \r\nAls het een Mac is, moeten gebruikers Parallels installeren - en Parallels gebruikt een deel van het geheugen vandaar dat meer beter zal zijn."
+  },
+  {
+    "id": "276a",
+    "keywords": [
+      "oefenprogramma;nieuw;OxyMoves;Oxygen"
+    ],
+    "vraag": "Hoe maak ik een nieuw oefenprogramma voor een patiënt?",
+    "antwoord": "In **CGM Oxygen**: open het patiëntendossier > Behandeling > OxyMoves > Nieuw, geef een naam in en klik op 'Creëer nieuw programma'. Daarna opent de **OxyMoves webtoepassing**, waar je oefeningen selecteert en toevoegt."
+  },
+  {
+    "id": "277a",
+    "keywords": [
+      "oefeningen zoeken;toevoegen;parameters;web;OxyMoves"
+    ],
+    "vraag": "Hoe voeg ik oefeningen toe en pas ik parameters aan?",
+    "antwoord": "In de **OxyMoves webtoepassing**: zoek oefeningen via trefwoorden of filters, klik op een oefening om toe te voegen. Daarna stel je sets/herhalingen/duur in via de parameters onderaan."
+  },
+  {
+    "id": "278a",
+    "keywords": [
+      "oefenprogramma openen;aanpassen;Oxygen;web;OxyMoves"
+    ],
+    "vraag": "Hoe pas ik een bestaand oefenprogramma aan?",
+    "antwoord": "In **CGM Oxygen**: selecteer een bestaand programma onder Behandeling. Klik op 'Website OxyMoves'. In de **webtoepassing** kun je oefeningen toevoegen, aanpassen of verwijderen."
+  },
+  {
+    "id": "279a",
+    "keywords": [
+      "verzenden;e-mail;oefenprogramma;Oxygen;OxyMoves"
+    ],
+    "vraag": "Hoe verstuur ik een oefenprogramma per e-mail naar een patiënt?",
+    "antwoord": "In **CGM Oxygen**: kies het oefenprogramma en klik op 'Verzenden via e-mail'. Je eigen mailprogramma opent automatisch met het bericht."
+  },
+  {
+    "id": "280a",
+    "keywords": [
+      "weergave;e-mail;programma;Oxygen;web;OxyMoves"
+    ],
+    "vraag": "Hoe bekijk ik wat de patiënt per mail ontvangt?",
+    "antwoord": "In **CGM Oxygen**: open het oefenprogramma en klik op 'Patiëntenportaal'. De **webtoepassing** toont de weergave die de patiënt ontvangt."
+  },
+  {
+    "id": "281a",
+    "keywords": [
+      "e-mailbericht aanpassen;sjablonen;Oxygen;OxyMoves"
+    ],
+    "vraag": "Hoe pas ik het e-mailbericht voor OxyMoves aan?",
+    "antwoord": "In **CGM Oxygen**: Basisbestanden > Sjablonen > Standaardberichten > 'E-mail oefenschema Oxymoves' openen en aanpassen."
+  },
+  {
+    "id": "282a",
+    "keywords": [
+      "standaardprotocol;nieuw aanmaken;web;OxyMoves"
+    ],
+    "vraag": "Hoe maak ik een nieuw standaardprotocol aan?",
+    "antwoord": "In de **OxyMoves webtoepassing**: klik op Exit, zoek oefeningen, pas parameters toe en klik op 'Stel in als protocol'. Geef een naam en sla op."
+  },
+  {
+    "id": "283a",
+    "keywords": [
+      "protocol selecteren;programma;web;OxyMoves"
+    ],
+    "vraag": "Hoe selecteer ik een standaardprotocol bij een oefenprogramma?",
+    "antwoord": "In de **OxyMoves webtoepassing**: kies onder Protocollen 'Mijn' of 'Alle', selecteer het protocol en voeg dit toe aan het oefenprogramma."
+  },
+  {
+    "id": "284a",
+    "keywords": [
+      "protocol aanpassen;web;OxyMoves"
+    ],
+    "vraag": "Hoe pas ik een standaardprotocol aan?",
+    "antwoord": "In de **OxyMoves webtoepassing**: klik op Exit, kies een protocol onder Protocollen en wijzig de oefeningen/parameters. Klik op Opslaan."
+  },
+  {
+    "id": "285a",
+    "keywords": [
+      "protocol verwijderen;web;OxyMoves"
+    ],
+    "vraag": "Hoe verwijder ik een standaardprotocol?",
+    "antwoord": "In de **OxyMoves webtoepassing**: ga naar Protocol, vink het protocol aan en klik op Verwijderen."
+  },
+  {
+    "id": "286a",
+    "keywords": [
+      "eigen oefening;aanmaken;web;OxyMoves"
+    ],
+    "vraag": "Hoe maak ik mijn eigen oefening aan?",
+    "antwoord": "In de **OxyMoves webtoepassing**: klik op ‘Maak oefening’, vul naam/omschrijving/trefwoorden in, kies modules en upload foto's of video's."
+  },
+  {
+    "id": "287a",
+    "keywords": [
+      "eigen oefening verwijderen;web;OxyMoves"
+    ],
+    "vraag": "Hoe verwijder ik een eigen oefening?",
+    "antwoord": "In de **OxyMoves webtoepassing**: ga naar 'Mijn oefeningen', filter op module of zoekterm, vink aan en klik op Verwijderen."
+  },
+  {
+    "id": "288a",
+    "keywords": [
+      "oefening zoeken;bladeren;web;OxyMoves"
+    ],
+    "vraag": "Hoe zoek ik snel een oefening op?",
+    "antwoord": "In de **OxyMoves webtoepassing**: gebruik 'Home' voor zoeken op trefwoord of 'Bladeren' om categorieën te openen."
+  },
+  {
+    "id": "289a",
+    "keywords": [
+      "favorieten;oefening toevoegen;web;OxyMoves"
+    ],
+    "vraag": "Hoe voeg ik een oefening toe aan mijn favorieten?",
+    "antwoord": "In de **OxyMoves webtoepassing**: klik op het ster-icoon op de oefening. Nogmaals klikken verwijdert de favoriet."
+  },
+  {
+    "id": "290a",
+    "keywords": [
+      "favorieten bekijken;web;OxyMoves"
+    ],
+    "vraag": "Hoe toon ik mijn favorieten?",
+    "antwoord": "In de **OxyMoves webtoepassing**: open het menu Oefeningen en kies 'Favorieten'."
+  },
+  {
+    "id": "301a",
+    "keywords": [
+      "transactietype;Payconiq;instellen"
+    ],
+    "vraag": "Hoe stel ik het Payconiq-transactietype in?",
+    "antwoord": "Ga naar Basisbestanden > Transactietypes > Nieuw. Vul omschrijving, IBAN/BIC, rekeninghouder en betalingstype QR-code in en vink Contant, Afronden en Gebruik in betalingen aan."
+  },
+  {
+    "id": "302a",
+    "keywords": [
+      "Payconiq;activeren;directe betalingen;Payconiq"
+    ],
+    "vraag": "Hoe activeer ik Payconiq voor directe betalingen?",
+    "antwoord": "Ga naar Extra > Configuratie > Nieuw > Payconiq. Kies het transactietype en vul API-key en Payment ID in voor directe betalingen."
+  },
+  {
+    "id": "303a",
+    "keywords": [
+      "Payconiq sticker;QR-code;afdrukken"
+    ],
+    "vraag": "Hoe druk ik de Payconiq-sticker met QR-code af?",
+    "antwoord": "Na het activeren van Payconiq klik je onder Sticker op 'Payconiq-sticker afdrukken'Via Extra,Configuratie,Payconiq, printericoon. De sticker kan in verschillende ruimtes opgehangen worden."
+  },
+  {
+    "id": "304a",
+    "keywords": [
+      "Payconiq;facturen;activeren"
+    ],
+    "vraag": "Hoe activeer ik Payconiq voor betalingen via factuur?",
+    "antwoord": "Ga naar Extra > Configuratie > Payconiq. Kies transactietype en vul API-key en Payment ID in voor facturen. De patiënt scant de QR-code op de factuur of op OxyCity."
+  },
+  {
+    "id": "305a",
+    "keywords": [
+      "meerdere QR-codes;kabinet;Payconiq"
+    ],
+    "vraag": "Wat moet ik doen als er meerdere QR-codes per kabinet zijn?",
+    "antwoord": "Voer voor elke QR-code ook een API-key en Payment ID in via de Payconiq-configuratie."
+  },
+  {
+    "id": "306a",
+    "keywords": [
+      "contant;Payconiq;betaling"
+    ],
+    "vraag": "Hoe betaalt de patiënt via Payconiq?",
+    "antwoord": "In het venster openstaande rekeningen selecteer je de rekening en kies je Payconiq als betaalmiddel. Na het inscannen van de QR-code verschijnt een melding wanneer de betaling gelukt is."
+  },
+  {
+    "id": "307a",
+    "keywords": [
+      "factuur betalen;OxyCity;Payconiq"
+    ],
+    "vraag": "Hoe betaalt de patiënt een factuur via OxyCity met Payconiq?",
+    "antwoord": "Maak een factuur zonder betaling, maak daarna een SEPA-overschrijving met QR-code. Deze verschijnt in OxyCity zodat de patiënt kan scannen en betalen."
+  },
+  {
+    "id": "308a",
+    "keywords": [
+      "betalingen controleren;Payconiq;rapporten"
+    ],
+    "vraag": "Hoe controleer ik of Payconiq-betalingen uitgevoerd zijn?",
+    "antwoord": "Ga naar Rapporten > Lijsten > Financieel > Dagontvangsten Payconiq. Selecteer periode en transactietype en klik op Toepassen."
+  },
+  {
+    "id": "309a",
+    "keywords": [
+      "status;onbetaalde facturen;Payconiq"
+    ],
+    "vraag": "Hoe controleer ik de Payconiq-status van onbetaalde facturen?",
+    "antwoord": "Ga naar Rapporten > Lijsten > Financieel > Dagontvangsten Payconiq en klik bovenaan op 'Payconiq-betalingen controleren'."
+  },
+  {
+    "id": "310a",
+    "keywords": [
+      "voorschot;Payconiq;zonder kassa"
+    ],
+    "vraag": "Hoe geef ik een voorschot in wanneer de Kassamodule niet actief is?",
+    "antwoord": "Selecteer een prestatie, kies Voorschot Payconiq, vul het bedrag in en laat de patiënt de QR-code scannen."
+  },
+  {
+    "id": "311a",
+    "keywords": [
+      "voorschot;Payconiq;met kassa"
+    ],
+    "vraag": "Hoe geef ik een voorschot in wanneer de Kassamodule actief is?",
+    "antwoord": "Geef het voorschotbedrag in, selecteer Payconiq als transactietype en laat de patiënt scannen."
+  },
+  {
+    "id": "312a",
+    "keywords": [
+      "voorschot;agenda;Payconiq"
+    ],
+    "vraag": "Hoe geef ik een voorschot in via de agenda?",
+    "antwoord": "Open de afspraak, kies bij Voorschot voor Payconiq, vul het bedrag in en laat de patiënt scannen."
+  },
+  {
+    "id": "313a",
+    "keywords": [
+      "Payconiq account;controle"
+    ],
+    "vraag": "Hoe krijg ik toegang tot mijn persoonlijke Payconiq-account?",
+    "antwoord": "Via Favorieten > Payconiq kun je inloggen om betalingen te bekijken."
+  },
+  {
+    "id": "314a",
+    "keywords": [
+      "planner;planning maken;afspraken plannen"
+    ],
+    "vraag": "Hoe maak ik een planning voor een patiënt?",
+    "antwoord": "Open het patiëntendossier > Administratief > Planner kinesitherapie/logopedie > Nieuw. Kies voorschrift, aantal behandelingen, dagen, zorgverlener, afspraaktype en uren. Klik op Plannen om de afspraken in te voeren."
+  },
+  {
+    "id": "315a",
+    "keywords": [
+      "planner;importeren;agenda"
+    ],
+    "vraag": "Hoe importeer ik geplande afspraken in de agenda?",
+    "antwoord": "Open de agenda en klik op het refresh‑icoon. Ga naar Administratief > Planner en vink de afspraken aan die je wil importeren. Klik op OK om ze toe te voegen."
+  },
+  {
+    "id": "316a",
+    "keywords": [
+      "geplande afspraken;import mislukt;rood;planner"
+    ],
+    "vraag": "Waarom verschijnen sommige geplande afspraken in het rood of doorgestreept?",
+    "antwoord": "Dit gebeurt wanneer een andere afspraak dezelfde tijd blokkeert. De planner toont dan conflicten in het rood of doorgestreept."
+  },
+  {
+    "id": "317a",
+    "keywords": [
+      "planning verwijderen;planner"
+    ],
+    "vraag": "Hoe verwijder ik een bestaande planning?",
+    "antwoord": "Ga naar het patiëntendossier > Administratief > Planner. Klik naast de planningsdatum op het zwarte kruisje en bevestig met Ja."
+  },
+  {
+    "id": "318a",
+    "keywords": [
+      "praktijklogo;documenten;briefhoofd;logo toevoegen"
+    ],
+    "vraag": "Hoe stel ik mijn praktijklogo in op alle documenten?",
+    "antwoord": "Ga naar Basisbestanden > Sjablonen > Tekstfragmenten. Kies in de map ‘Briefhoofd’ het tekstfragment ‘Briefhoofd Oxygen uitgebreid logo’. Open de tekstverwerker, verwijder het standaardlogo, voeg uw eigen afbeelding in via Invoegen > Afbeelding, en sluit af. Klik daarna op Toepassen om het logo op te slaan. fileciteturn10file0"
+  },
+  {
+    "id": "319a",
+    "keywords": [
+      "ongeregistreerde;prestaties;andere praktijk"
+    ],
+    "vraag": "Hoe registreer ik behandelingen die in een andere praktijk gebeurd zijn?",
+    "antwoord": "Gebruik twee velden:(1) in het voorschrift ‘Ongeregistreerd’ als het om hetzelfde voorschrift gaat; (2) in Periode > Jaar info om de telling per jaar te corrigeren."
+  },
+  {
+    "id": "320a",
+    "keywords": [
+      "wijzigingen;behandeling;extra facturatieperiode"
+    ],
+    "vraag": "Hoe registreer ik wijzigingen tijdens een behandeling, zoals een ander pathologietype of behandelingsplaats?",
+    "antwoord": "Voeg in de behandelingsfiche een ‘Extra facturatieperiode’ toe via de knop onderaan. Pas in deze nieuwe periode de gewijzigde waarden aan, zoals pathologietype of plaats en datumveld \"Vanaf\" Deze moet een datum zijn op een prestatie waarvan er geen papieren of elektronische rekening is gemaakt."
+  },
+  {
+    "id": "321a",
+    "keywords": [
+      "facturatieperiode;verwijderen;aanpassen"
+    ],
+    "vraag": "Hoe beheer ik bestaande facturatieperiodes?",
+    "antwoord": "Gebruik de pijltjes rechtsboven om eerdere periodes te bekijken. Verwijderen kan enkel als er nog geen prestaties in die periode geboekt zijn."
+  },
+  {
+    "id": "322a",
+    "keywords": [
+      "nieuwe behandeling;same jaar;courant;nieuwe periode"
+    ],
+    "vraag": "Hoe registreer ik een tweede courante behandeling in hetzelfde jaar?",
+    "antwoord": "Pauzeer eerst de bestaande courante periode. Voeg dan de nieuwe prestatie toe; het systeem maakt automatisch een nieuwe periode aan zodat de correcte startcode gebruikt wordt."
+  },
+  {
+    "id": "323a",
+    "keywords": [
+      "verkeerde periode;prestaties;correctie"
+    ],
+    "vraag": "Wat doe ik als prestaties op de verkeerde periode geboekt zijn?",
+    "antwoord": "Selecteer alle betrokken prestaties (met Shift), klik op de datum in de kolom ‘Periode’, kies de juiste periode en klik op ‘Rekening maken’. Bevestig de melding om de codes te corrigeren."
+  },
+  {
+    "id": "324a",
+    "keywords": [
+      "rechten foutmelding;voorschrift;periode"
+    ],
+    "vraag": "Waarom krijg ik de melding dat de huidige gebruiker niet genoeg rechten heeft?",
+    "antwoord": "Dit gebeurt meestal wanneer het verkeerde voorschrift actief staat. Kies het juiste voorschrift, selecteer de eerste onafgerekende prestatie en maak opnieuw de rekening."
+  },
+  {
+    "id": "325a",
+    "keywords": [
+      "courante dossierkost;boeking mislukt"
+    ],
+    "vraag": "Waarom kan ik geen courante dossierkost boeken?",
+    "antwoord": "Een courante dossierkost mag maar één keer per kalenderjaar. Controleer het dossier-icoon: rood = al geboekt, groen = nog niet geboekt."
+  },
+  {
+    "id": "326a",
+    "keywords": [
+      "facturatieperiode;aanpassen;afgerekende prestaties"
+    ],
+    "vraag": "Waarom kan ik de facturatieperiode niet aanpassen?",
+    "antwoord": "Een facturatieperiode met afgerekende prestaties kan niet gewijzigd worden. Maak een nieuwe extra facturatieperiode vanaf de dag na de laatste afgerekende prestatie."
+  },
+  {
+    "id": "327a",
+    "keywords": [
+      "pathologietype fout;prestatie;periode"
+    ],
+    "vraag": "Waarom krijg ik de foutmelding dat het pathologietype van de prestatie verschilt van het voorschrift of de periode?",
+    "antwoord": "Het pathologietype van prestatie en periode komt niet overeen. Maak een nieuwe periode aan (via Nieuw) in plaats van de bestaande te wijzigen. Bestaande periodes mag je niet wijzigen om een correcte telling te behouden."
+  },
+  {
+    "id": "328a",
+    "keywords": [
+      "nomenclatuurcodes fout;correctie"
+    ],
+    "vraag": "Wat betekent de melding dat het aantal, type of volgorde van de codes niet conform is?",
+    "antwoord": "Dit wil zeggen dat de codes niet comform de wetgeving zijn. Kies ‘Ja’ om de codes automatisch te laten corrigeren. CGM Oxygen past dan de juiste codes toe tijdens rekening maken."
+  },
+  {
+    "id": "329a",
+    "keywords": [
+      "OKI ML1120;installatie;papier plaatsen"
+    ],
+    "vraag": "Hoe installeer ik de OKI ML1120 en plaats ik kettingpapier?",
+    "antwoord": "Haal de printer uit de doos, klik het achterstuk vast, plaats kettingpapier tussen de klemmen, zet de rechterrand op markering 10, duw de klem vast en kies Kettingpapier. Druk daarna op Load/Eject."
+  },
+  {
+    "id": "330a",
+    "keywords": [
+      "Windows 11;Windows 10;driver werkt niet;oki"
+    ],
+    "vraag": "Waarom werkt de standaard Windows‑driver niet?",
+    "antwoord": "Windows installeert automatisch een verkeerde driver waardoor prints verdwijnen. U moet het stuurprogramma handmatig aanpassen via Apparaten & printers."
+  },
+  {
+    "id": "331a",
+    "keywords": [
+      "driver wijzigen;OKI MICROLINE 1120;Windows Update"
+    ],
+    "vraag": "Hoe stel ik het juiste stuurprogramma in Windows 10/11 in?",
+    "antwoord": "Open Apparaten & printers > dubbelklik OKI-printer > Eigenschappen > Geavanceerd > Nieuw. Klik op Windows Update, kies Okidata → OKI MICROLINE 1120 en bevestig."
+  },
+  {
+    "id": "332a",
+    "keywords": [
+      "Windows 10;Windows 11;driver installeren;oki"
+    ],
+    "vraag": "Hoe installeer ik de OKI‑driver in Windows 10 en 11?",
+    "antwoord": "Verbind printer via USB, kies ‘Stuurprogramma’s zoeken en installeren’ en plaats de OKI‑CD. Windows zoekt en installeert automatisch de juiste driver."
+  },
+  {
+    "id": "333a",
+    "keywords": [
+      "indicatoren;statuslampjes;oki"
+    ],
+    "vraag": "Wat betekenen de lampjes op de OKI ML1120?",
+    "antwoord": "SEL = printer klaar; ALARM = papier op of blokkering; STATUS 1/2 = printmodus. Knipperen duidt op fout of hoge temperatuur."
+  },
+  {
+    "id": "334a",
+    "keywords": [
+      "Oxygen;printer instellen;kettingformulier;oki"
+    ],
+    "vraag": "Hoe stel ik mijn OKI‑printer in binnen CGM Oxygen?",
+    "antwoord": "Ga naar Extra > Configuratie > Printer (#RIZIV). Kies Kettingformulier + Via driver en stel marges in: boven 0, links 2, voet 6. Print een testpagina en pas zo nodig marges aan."
+  },
+  {
+    "id": "335a",
+    "keywords": [
+      "micro‑adjust;afdrukpositie;te hoog;oki"
+    ],
+    "vraag": "Hoe corrigeer ik wanneer de afdruk te hoog of te laag begint?",
+    "antwoord": "Zet SEL in pauze, gebruik Load/Eject + SEL of LF/FF om het papier telkens 0,3666 mm hoger/lager te zetten. Sluit af met SEL."
+  },
+  {
+    "id": "336a",
+    "keywords": [
+      "tear‑off;afscheurlijn;bijregelen;oki"
+    ],
+    "vraag": "Hoe regel ik de tear‑off‑positie bij?",
+    "antwoord": "Na afdruk op pauze zetten, TEAR ingedrukt houden en SEL of LF/FF gebruiken om het papier fijn omhoog/omlaag te bewegen."
+  },
+  {
+    "id": "337a",
+    "keywords": [
+      "Windows 10;update;driver kwijt;oki"
+    ],
+    "vraag": "Waarom werkt mijn printer niet meer na een Windows 10‑update?",
+    "antwoord": "Windows 10 reset soms de driver. Kies opnieuw OKI MICROLINE 1120 uit het stuurprogrammalijstje onder Geavanceerd."
+  },
+  {
+    "id": "338a",
+    "keywords": [
+      "standaardprinter;Windows 10;oki"
+    ],
+    "vraag": "Hoe voorkom ik dat Windows automatisch de standaardprinter wijzigt?",
+    "antwoord": "Ga naar Instellingen > Apparaten en zet de optie ‘Wanneer de laatst gebruikte printer…’ op Uit."
+  },
+  {
+    "id": "339a",
+    "keywords": [
+      "reset;fout lettertype;papier scheef;oki"
+    ],
+    "vraag": "Hoe reset ik de OKI ML1120 naar fabrieksinstellingen?",
+    "antwoord": "Zet de printer uit, houd SEL + LF/FF ingedrukt en zet de printer aan. Laat de knoppen los wanneer het geluid stopt."
+  },
+  {
+    "id": "340a",
+    "keywords": [
+      "Epson LX350;installatie;kettingpapier"
+    ],
+    "vraag": "Hoe installeer ik de Epson LX 350 en plaats ik kettingpapier?",
+    "antwoord": "Haal de printer uit de doos, monteer de twee metalen geleiders achteraan, plaats het kettingpapier tussen de zwarte klemmen, lijn de rechterrand uit op de pijl en druk op Load/Eject om het papier in te laden."
+  },
+  {
+    "id": "341a",
+    "keywords": [
+      "driver;USB-stick;installatie;epson"
+    ],
+    "vraag": "Hoe installeer ik de Epson LX 350 op mijn computer?",
+    "antwoord": "Sluit de printer via USB aan, steek de meegeleverde USB‑stick of CD in uw computer en voer de installer uit. De installer installeert automatisch alle benodigde drivers."
+  },
+  {
+    "id": "342a",
+    "keywords": [
+      "Oxygen;printerinstellingen;kettingformulier;epson"
+    ],
+    "vraag": "Hoe stel ik de Epson LX 350 in binnen Oxygen?",
+    "antwoord": "Ga naar Extra > Configuratie > Printer (#RIZIV). Kies Kettingformulier, afdruksysteem ‘Via driver’ en selecteer de Epson‑printer. Stel marges in: boven 2, links 0, voet 6. Test een afdruk en pas marges aan indien nodig."
+  },
+  {
+    "id": "343a",
+    "keywords": [
+      "micro-adjust;afdrukpositie;te hoog laag;epson"
+    ],
+    "vraag": "Hoe corrigeer ik de afdrukpositie met micro‑adjust?",
+    "antwoord": "Laad papier met Load/Eject, zet de printer in pauze (2 sec Pause), beweeg het papier omhoog of omlaag. Gebruik LF/FF voor omlaag en Load/Eject voor omhoog. Druk opnieuw op Pause om op te slaan."
+  },
+  {
+    "id": "344a",
+    "keywords": [
+      "tear off;afscheurlijn;bijregelen;epson"
+    ],
+    "vraag": "Hoe regel ik de tear-off positie bij?",
+    "antwoord": "Druk op Tear Off om naar de afscheurstand te gaan, houd vervolgens 3 sec de Pause‑knop ingedrukt tot deze knippert en gebruik LF/FF of Load/Eject om de positie aan te passen. Druk opnieuw op Pause."
+  },
+  {
+    "id": "345a",
+    "keywords": [
+      "reset;standaardinstellingen;fout lettertype;epson"
+    ],
+    "vraag": "Hoe reset ik de Epson LX 350 naar fabrieksinstellingen?",
+    "antwoord": "Zet de printer uit,Druk tegelijk op de knoppen Tear Off en LF/FF, en zet de printer terug aan laat los zodra de printer een geluid maakt en de lampjes beginnen te knipperen. Hiermee wordt de printer volledig gereset."
+  },
+  {
+    "id": "346a",
+    "keywords": [
+      "zorgverlener;pseudocodes;rechten"
+    ],
+    "vraag": "Hoe duid ik aan dat een zorgverlener pseudocodes mag gebruiken?",
+    "antwoord": "Ga naar Bestanden > Zorgverleners > dubbelklik de zorgverlener > tab Info zorgverlener. Vink bij Behandelingsfichetype ‘Pseudocodes’ aan."
+  },
+  {
+    "id": "347a",
+    "keywords": [
+      "tariefperiode;discipline;pseudocode"
+    ],
+    "vraag": "Hoe bepaal ik de tariefperiode voor een discipline-gerelateerde pseudocode?",
+    "antwoord": "Basisbestanden > Nomenclatuur > Overzicht Nomenclatuur. Filter op discipline + Pseudocodes, klik op Tariefperiodes > Nieuw, kies begindatum en bevestig. Geef daarna het tarief in de rechterkolom in."
+  },
+  {
+    "id": "348a",
+    "keywords": [
+      "pseudocode aanmaken;extra kosten;discipline"
+    ],
+    "vraag": "Hoe maak ik een pseudocode voor extra kosten binnen een discipline?",
+    "antwoord": "Ga naar Overzicht Nomenclatuur, filter op discipline + Pseudocodes, klik op Code toevoegen en vul code, omschrijving, btw-type en bedrag in."
+  },
+  {
+    "id": "349a",
+    "keywords": [
+      "extra kosten;periode instellen;discipline;pseudocode"
+    ],
+    "vraag": "Hoe stel ik de periode in waarin extra kosten worden gefactureerd?",
+    "antwoord": "Open de behandelingsfiche > Extra facturatieperiode toevoegen > kies startdatum > selecteer pseudocode. Bedrag verschijnt automatisch."
+  },
+  {
+    "id": "350a",
+    "keywords": [
+      "extra kosten;volgende pseudocode"
+    ],
+    "vraag": "Hoe voeg ik een extra type kosten toe aan dezelfde behandelingsreeks?",
+    "antwoord": "Behandelingsfiche > Extra pseudocode toevoegen > selecteer extra pseudocode(s)."
+  },
+  {
+    "id": "351a",
+    "keywords": [
+      "automatisch;extra kosten;prestaties;pseudocode"
+    ],
+    "vraag": "Hoe kan ik automatisch extra kosten toevoegen bij prestaties?",
+    "antwoord": "In de behandelingsfiche vink je bij Extra kosten de pseudocode aan en activeer je ‘Standaard aanrekenen’. De kosten verschijnen dan automatisch bij prestaties."
+  },
+  {
+    "id": "352a",
+    "keywords": [
+      "prestatie;extra kosten;standaard;pseudocode"
+    ],
+    "vraag": "Hoe registreer ik een prestatie met extra kosten die standaard geboekt worden?",
+    "antwoord": "Plan een afspraak in de agenda, klik Valideren. De pseudocodes staan automatisch aangevinkt. Via het plusteken in Dagboek zie je de extra kosten."
+  },
+  {
+    "id": "353a",
+    "keywords": [
+      "manueel;extra kost;prestatie;pseudocode"
+    ],
+    "vraag": "Hoe voeg ik manueel een extra kost toe bij een prestatie?",
+    "antwoord": "In de behandelingsfiche vink je ‘Standaard aanrekenen’ uit. Bij de prestatie voeg je de extra kost toe via Extra kosten in agenda of dagboek."
+  },
+  {
+    "id": "354a",
+    "keywords": [
+      "prestatie;extra kost selecteren;agenda;pseudocode"
+    ],
+    "vraag": "Hoe selecteer ik extra kosten via de agenda?",
+    "antwoord": "Maak een afspraak, klik Valideren, kies ‘Extra kost toevoegen’ en selecteer de gewenste pseudocode. Extra kosten verschijnen via het plusteken in het dagboek."
+  },
+  {
+    "id": "355a",
+    "keywords": [
+      "prestatie;extra kost;dagboek;pseudocode"
+    ],
+    "vraag": "Hoe selecteer ik extra kosten via het dagboek of Prestaties?",
+    "antwoord": "Klik in de kolom Extra kosten naast de prestatie en selecteer de gewenste kost(en). Indien de kolom ontbreekt, voeg deze toe via Veldkiezer."
+  },
+  {
+    "id": "356a",
+    "keywords": [
+      "factureren;extra kosten;honoraria;pseudocode"
+    ],
+    "vraag": "Hoe factureer ik extra kosten samen met de prestaties op één document?",
+    "antwoord": "Bij Printerinstellingen van Niet-verzekerde vinkt u zowel Pseudocodes als de discipline aan. Daarna maakt u een rekening via Financieel > Rekening > Nieuw."
+  },
+  {
+    "id": "357a",
+    "keywords": [
+      "stoppen;extra kosten;facturatieperiode;pseudocode"
+    ],
+    "vraag": "Hoe stop ik de facturatieperiode van extra kosten?",
+    "antwoord": "Behandelingsfiche > Extra facturatieperiode toevoegen > kies een nieuwe periode zonder extra kosten. De vorige wordt automatisch afgesloten."
+  },
+  {
+    "id": "358a",
+    "keywords": [
+      "pseudocode;niet-discipline;tariefperiode"
+    ],
+    "vraag": "Hoe bepaal ik de tariefperiode voor niet-discipline gerelateerde pseudocodes?",
+    "antwoord": "Overzicht Nomenclatuur > filter op Pseudocode + Nomenclatuur > Tariefperiodes > Nieuw > datum kiezen > tarief invullen."
+  },
+  {
+    "id": "359a",
+    "keywords": [
+      "pseudocode aanmaken;niet-discipline"
+    ],
+    "vraag": "Hoe maak ik een pseudocode voor niet-discipline gerelateerde extra kosten?",
+    "antwoord": "Overzicht Nomenclatuur > filter op Pseudocode + Nomenclatuur > Code toevoegen > code, omschrijving, btw en bedrag invullen."
+  },
+  {
+    "id": "360a",
+    "keywords": [
+      "extra kosten;periode instellen;niet-discipline;pseudocode"
+    ],
+    "vraag": "Hoe bepaal ik de periode voor niet-discipline extra kosten?",
+    "antwoord": "Behandelingsfiche pseudocode > Extra facturatieperiode toevoegen > startdatum kiezen > pseudocode selecteren."
+  },
+  {
+    "id": "361a",
+    "keywords": [
+      "prestaties;enkel extra kost;pseudocode"
+    ],
+    "vraag": "Hoe registreer ik een prestatie met enkel extra kosten?",
+    "antwoord": "Maak een afspraak voor een niet-discipline behandeling, klik Valideren. De pseudocode verschijnt automatisch in het dagboek."
+  },
+  {
+    "id": "362a",
+    "keywords": [
+      "factureren;enkel extra kosten;pseudocode"
+    ],
+    "vraag": "Hoe factureer ik enkel extra kosten?",
+    "antwoord": "Financieel > Rekening > Nieuw > tab Rekening > vink de extra kosten aan > klik Rekening maken."
+  },
+  {
+    "id": "363a",
+    "keywords": [
+      "Sms4Less;registreren;account"
+    ],
+    "vraag": "Hoe registreer ik mij bij Sms4Less?",
+    "antwoord": "Ga naar www.sms4less.be > 'Registreer nu!' > vul uw gsm-nummer in > u ontvangt een gebruikersnaam en wachtwoord. Log daarna opnieuw in om sms‑credits te kopen."
+  },
+  {
+    "id": "364a",
+    "keywords": [
+      "Sms4Less;instellen;CGM OxyBoxy"
+    ],
+    "vraag": "Hoe stel ik mijn Sms4Less‑account in CGM OxyBoxy in?",
+    "antwoord": "Menu > Configuratie > Externe accounts > Nieuw > kies Sms4Less > vul gebruikersnaam en wachtwoord in > kies luide uren en sms‑afsluiting > Toepassen."
+  },
+  {
+    "id": "365a",
+    "keywords": [
+      "afspraakberichten;sms;instellen"
+    ],
+    "vraag": "Hoe verzend ik afspraakberichten via sms in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Agenda’s > agenda kiezen > tab Communicatie > vink Sms4Less aan > open ‘Afspraken (Nieuw, Wijziging, Annulatie)’ en zet Actief aan > stel tekst en prioriteit in."
+  },
+  {
+    "id": "366a",
+    "keywords": [
+      "verjaardagberichten;sms;instellen"
+    ],
+    "vraag": "Hoe verzend ik verjaardagberichten via sms in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Algemeen > tab Communicatie > Sms4Less activeren > ‘Verjaardagen’ aanvinken > sms‑kanaal bovenaan zetten > berichttekst aanpassen > tijdstip instellen > OK."
+  },
+  {
+    "id": "367a",
+    "keywords": [
+      "communicatie;berichten;overzicht"
+    ],
+    "vraag": "Hoe verzend ik afspraak‑ of verjaardagberichten via sms in Oxyboxy?",
+    "antwoord": "Registreer bij Sms4Less, stel uw account in OxyBoxy in en activeer per agenda de communicatie‑instellingen onder Menu > Configuratie > Agenda’s > Communicatie."
+  },
+  {
+    "id": "368a",
+    "keywords": [
+      "afspraakbevestiging;wijziging;annulatie"
+    ],
+    "vraag": "Hoe verzend ik afspraakbevestigingen of meldingen van wijziging/annulatie in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Agenda’s > Communicatie > ‘Afspraken (Nieuw, Wijziging, Annulatie)’ > Actief > kanaal kiezen > berichttekst aanpassen > Regelmaat en Vertraging instellen."
+  },
+  {
+    "id": "369a",
+    "keywords": [
+      "afspraakherinnering;sms;instellen"
+    ],
+    "vraag": "Hoe verzend ik afspraakherinneringen in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Agenda’s > Communicatie > ‘Afspraakherinnering’ > Actief aanvinken > kanaal naar boven zetten > berichttekst aanpassen > ‘Tijd voor afspraak’ instellen."
+  },
+  {
+    "id": "370a",
+    "keywords": [
+      "weigering;afspraakaanvraag;OxyCity"
+    ],
+    "vraag": "Hoe verzend ik weigeringen voor afspraakaanvragen in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Agenda’s > Communicatie > ‘Weigering van een aanvraag tot afspraak’ > Actief > kanaal kiezen > berichttekst aanpassen > opslaan."
+  },
+  {
+    "id": "371a",
+    "keywords": [
+      "prioriteit;communicatie;kanalen"
+    ],
+    "vraag": "Hoe stel ik prioriteit in voor communicatiekanalen in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Agenda’s > Communicatie > berichttype kiezen > pijltjes gebruiken om Sms/E‑mail/OxyCity in volgorde te zetten > ongewenste kanalen uitvinken."
+  },
+  {
+    "id": "372a",
+    "keywords": [
+      "standaardberichten;aanpassen"
+    ],
+    "vraag": "Hoe pas ik de inhoud van standaardberichten aan in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Agenda’s > Communicatie > berichttype kiezen > Bericht > taal bovenaan kiezen > onderwerp/koptekst/inhoud/voet aanpassen > OK."
+  },
+  {
+    "id": "373a",
+    "keywords": [
+      "standaardberichten;origineel;herstellen"
+    ],
+    "vraag": "Hoe zet ik standaardberichten terug naar origineel in Oxyboxy?",
+    "antwoord": "Menu > Configuratie > Agenda’s > Communicatie > Bericht > taal kiezen > 'Origineel terugzetten' > voor één of alle talen bevestigen."
+  },
+  {
+    "id": "374a",
+    "keywords": [
+      "berichten ontvangen;patiënten;instellen"
+    ],
+    "vraag": "Hoe stel ik in dat patiënten berichten mogen ontvangen in Oxyboxy?",
+    "antwoord": "Patiëntenfiche > gsm/e‑mail > ‘Berichten ontvangen’ aanvinken. Voor groepen: Menu > Lijsten > Patiënten > selecteer patiënten > klik op enveloppe‑icoon om te activeren."
+  },
+  {
+    "id": "375a",
+    "keywords": [
+      "status berichten;verstuurd;controle"
+    ],
+    "vraag": "Hoe controleer ik of een bericht verzonden werdin Oxyboxy?",
+    "antwoord": "Menu > Lijsten > Status berichten > naam patiënt ingeven > berichttype kiezen > Zoeken. Bij Status staat ‘Verstuurd’, of klik op het icoon om foutdetails te zien."
   }
 ]
