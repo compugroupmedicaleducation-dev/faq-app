@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 1. JSON laden
 // ---------------------------------------------------------------
 function loadFAQ() {
-    fetch("data.json")
+    fetch("https://compugroupmedicaleducation-dev.github.io/faq-app/data.json")
         .then(res => {
             if (!res.ok) throw new Error("Kan data.json niet laden");
             return res.json();
