@@ -1,371 +1,626 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FAQ</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stel je vraag</title>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --card-bg: white;
+      --text: #333;
+      --text-secondary: #666;
+      --text-muted: #777;
+      --border: #ddd;
+      --border-light: #e0e0e0;
+      --input-border: #ddd;
+      --input-focus: #1a73e8;
+      --chip-bg: white;
+      --chip-hover: #f0f0f0;
+      --chip-border: #999;
+      --answer-bg: #fafafa;
+      --button-bg: #fff;
+      --button-hover: #f5f5f5;
+      --primary-bg: #1a73e8;
+      --primary-hover: #1557b0;
+      --debug-bg: #fff3cd;
+      --shadow: rgba(0,0,0,0.1);
+      --toggle-bg: #e5e7eb;
+      --toggle-knob: #fff;
+    }
 
-<!-- Externe CSS -->
-<link rel="stylesheet" href="./app.css">
+    body.dark {
+      --bg: #1a1a1a;
+      --card-bg: #2d2d2d;
+      --text: #e5e5e5;
+      --text-secondary: #b0b0b0;
+      --text-muted: #999;
+      --border: #404040;
+      --border-light: #333;
+      --input-border: #404040;
+      --input-focus: #4a90e2;
+      --chip-bg: #3a3a3a;
+      --chip-hover: #454545;
+      --chip-border: #555;
+      --answer-bg: #252525;
+      --button-bg: #3a3a3a;
+      --button-hover: #454545;
+      --primary-bg: #4a90e2;
+      --primary-hover: #357abd;
+      --debug-bg: #4a4000;
+      --shadow: rgba(0,0,0,0.3);
+      --toggle-bg: #404040;
+      --toggle-knob: #e5e5e5;
+    }
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXX');
-</script>
+    * {
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
 
+    body { 
+      font-family: system-ui, Arial, sans-serif; 
+      margin: 24px; 
+      background: var(--bg); 
+      color: var(--text);
+    }
+    
+    .wrap { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      background: var(--card-bg); 
+      padding: 32px; 
+      border-radius: 12px; 
+      box-shadow: 0 2px 8px var(--shadow); 
+      position: relative;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    h1 { 
+      font-size: 24px; 
+      margin: 0; 
+      color: var(--text); 
+    }
+    
+    .theme-toggle-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .theme-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      user-select: none;
+    }
+
+    .theme-toggle {
+      position: relative;
+      width: 48px;
+      height: 24px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--toggle-bg);
+      cursor: pointer;
+      padding: 0;
+      outline: none;
+    }
+
+    .theme-toggle-knob {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--toggle-knob);
+      top: 2px;
+      left: 2px;
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    body.dark .theme-toggle-knob {
+      transform: translateX(24px);
+    }
+    
+    .hint { 
+      color: var(--text-secondary); 
+      font-size: 14px; 
+      margin-bottom: 20px; 
+    }
+    
+    input[type="text"] { 
+      width: 100%; 
+      padding: 12px 16px; 
+      font-size: 16px; 
+      border: 2px solid var(--input-border); 
+      border-radius: 10px; 
+      box-sizing: border-box; 
+      background: var(--card-bg);
+      color: var(--text);
+    }
+    
+    input[type="text"]:focus { 
+      outline: none; 
+      border-color: var(--input-focus); 
+    }
+    
+    .chips { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 8px; 
+      margin: 16px 0 8px; 
+      min-height: 36px; 
+    }
+    
+    .chip { 
+      padding: 10px 16px; 
+      border: 1px solid var(--border); 
+      border-radius: 999px; 
+      cursor: pointer; 
+      font-size: 14px; 
+      background: var(--chip-bg);
+      color: var(--text);
+    }
+    
+    .chip:hover { 
+      background: var(--chip-hover); 
+      border-color: var(--chip-border); 
+      transform: translateY(-1px); 
+    }
+    
+    .answer { 
+      border: 1px solid var(--border-light); 
+      background: var(--answer-bg); 
+      padding: 16px; 
+      border-radius: 12px; 
+      margin-top: 12px; 
+      white-space: pre-wrap; 
+      line-height: 1.6; 
+    }
+    
+    .answer-title { 
+      font-weight: 600; 
+      color: var(--input-focus); 
+      margin-bottom: 8px; 
+    }
+    
+    .actions { 
+      margin-top: 20px; 
+      display: flex; 
+      gap: 8px; 
+      flex-wrap: wrap; 
+    }
+    
+    button { 
+      padding: 12px 20px; 
+      border-radius: 10px; 
+      border: 1px solid var(--border); 
+      background: var(--button-bg); 
+      color: var(--text);
+      cursor: pointer; 
+      font-size: 14px; 
+    }
+    
+    button:hover { 
+      background: var(--button-hover); 
+    }
+    
+    button.primary { 
+      background: var(--primary-bg); 
+      color: #fff; 
+      border-color: var(--primary-bg); 
+    }
+    
+    button.primary:hover { 
+      background: var(--primary-hover); 
+    }
+    
+    .muted { 
+      color: var(--text-muted); 
+      font-size: 13px; 
+      margin-top: 12px; 
+    }
+    
+    .divider { 
+      height: 1px; 
+      background: var(--border-light); 
+      margin: 24px 0; 
+    }
+    
+    .debug { 
+      background: var(--debug-bg); 
+      padding: 12px; 
+      border-radius: 8px; 
+      margin: 12px 0; 
+      font-size: 12px; 
+      font-family: monospace; 
+      white-space: pre-wrap; 
+    }
+    
+    .stats { 
+      display: flex; 
+      gap: 16px; 
+      margin-bottom: 16px; 
+      font-size: 13px; 
+      color: var(--text-secondary); 
+    }
+    
+    .stat { 
+      display: flex; 
+      align-items: center; 
+      gap: 4px; 
+    }
+
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-secondary);
+    }
+
+    .error {
+      background: #fee;
+      border: 1px solid #fcc;
+      color: #c33;
+      padding: 16px;
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+
+    body.dark .error {
+      background: #4a2020;
+      border-color: #802020;
+      color: #ffaaaa;
+    }
+  </style>
 </head>
 <body>
-
-<div class="wrap">
-
-    <!-- HEADER -->
+  <div class="wrap">
     <div class="header">
-        <h1>Stel je vraag</h1>
-
-        <div class="theme-toggle-wrapper">
-            <span class="theme-label" id="themeLabel">Licht</span>
-            <button aria-label="Schakel tussen donker en licht modus" class="theme-toggle" id="themeToggle" type="button">
-                <span class="theme-toggle-knob" id="themeIcon">🌙</span>
-            </button>
-        </div>
+      <h1>Stel je vraag</h1>
+      <div class="theme-toggle-wrapper">
+        <span class="theme-label" id="themeLabel">Licht</span>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Schakel tussen donker en licht modus">
+          <span class="theme-toggle-knob" id="themeIcon">🌙</span>
+        </button>
+      </div>
     </div>
+    
+    <div class="hint">Begin te typen. We tonen direct <b>suggesties</b> uit de FAQ. </div>
 
-    <!-- HINT -->
-    <div class="hint">Begin te typen. We tonen direct <b>suggesties</b> uit de FAQ.</div>
-
-    <!-- STATISTIEKEN -->
     <div class="stats">
-        <div class="stat">📚 Onze database bevat inmiddels <span id="faqCount">0 </span>vragen en antwoorden</div>
+      <div class="stat">📚 Onze database bevat inmiddels <span id="faqCount">0</span> vragen en antwoorden</div>
     </div>
 
-    <!-- ZOEKVELD -->
-    <input autofocus id="q" placeholder="Bijv. Hoe voeg ik een gebruiker toe?" type="text"/>
+    <input type="text" id="q" placeholder="Typ hier je vraag..." />
+    
+    <div id="chips" class="chips">
+      <div class="loading">⏳ FAQ data wordt geladen...</div>
+    </div>
+    
+    <div id="answer" class="answer" style="display:none">
+      <div id="answerTitle" class="answer-title"></div>
+      <div id="answerText"></div>
+    </div>
 
-    <!-- RESULTATEN -->
-    <div class="chips" id="chips"></div>
+    <div class="actions">
+      <button id="clear" class="primary">Wis zoekterm</button>
+      <button id="contact">Neem contact op</button>
+    </div>
 
-    <!-- CENTRAAL DISPLAY WORDT NIET MEER GEBRUIKT -->
-    <div class="answer" id="answer" style="display:none">
-        <div class="answer-title" id="answerTitle"></div>
-        <div id="answerText"></div>
+    <div class="muted">
+      Niet gevonden wat je zocht? Klik op "Neem contact op" om een vraag te stellen.
     </div>
 
     <div class="divider"></div>
 
-    <!-- ACTIES -->
-    <div class="actions">
-        <button id="clear">🔄 Opnieuw</button>
-        <button class="primary" id="contact">✉️ Vraag niet gevonden? Neem contact op</button>
+    <div class="muted">
+      💡 <b>Tip:</b> gebruik Ctrl+D voor debug mode.
     </div>
 
-    <div class="muted">💡 Tip: Klik op een suggestie om het antwoord te zien</div>
+    <div id="dbg" class="debug" style="display:none"></div>
+  </div>
 
-    <!-- DEBUG -->
-    <div class="debug" id="dbg" style="display:none"></div>
+  <script>
+    // ===================================================================
+    // DATA LADEN VANUIT EXTERNE JSON
+    // ===================================================================
+    
+    let FAQ = [];
+    const JSON_URL = 'https://raw.githubusercontent.com/compugroupmedicaleducation-dev/faq-app/main/data.json';
 
-</div>
-
-<script>
-/* ================================================================
-    DATA INLADEN
-================================================================ */
-let FAQ = [];
-
-fetch('data.json')
-  .then(r => r.json())
-  .then(data => {
-    FAQ = data;
-    buildIndex();
-    $faqCount.textContent = FAQ.length;
-    renderChips([]);
-    console.log("Slimme FAQ geladen met", FAQ.length, "vragen");
-  });
-
-/* ================================================================
-    DOM ELEMENTEN
-================================================================ */
-const $q = document.getElementById('q');
-const $chips = document.getElementById('chips');
-const $clear = document.getElementById('clear');
-const $contact = document.getElementById('contact');
-const $dbg = document.getElementById('dbg');
-const $faqCount = document.getElementById('faqCount');
-const $themeToggle = document.getElementById('themeToggle');
-const $themeLabel = document.getElementById('themeLabel');
-const $themeIcon = document.getElementById('themeIcon');
-
-let debugMode = false;
-let INDEX = [];
-
-/* ================================================================
-    THEME HANDLING
-================================================================ */
-
-function detectInitialTheme() {
-  const saved = localStorage.getItem('theme');
-  if (saved === 'light' || saved === 'dark') return saved;
-
-  return window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light';
-}
-
-function applyTheme(theme) {
-  if (theme === 'dark') {
-    document.body.classList.add('dark');
-    $themeIcon.textContent = '🌞';
-    $themeLabel.textContent = 'Donker';
-  } else {
-    document.body.classList.remove('dark');
-    $themeIcon.textContent = '🌙';
-    $themeLabel.textContent = 'Licht';
-  }
-}
-
-let currentTheme = detectInitialTheme();
-applyTheme(currentTheme);
-
-$themeToggle.addEventListener('click', () => {
-  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('theme', currentTheme);
-  applyTheme(currentTheme);
-});
-
-/* ================================================================
-    INDEX OPBOUWEN (slim zoeken)
-================================================================ */
-function normalize(text) {
-  if (!text) return '';
-  return String(text)
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/\p{Diacritic}/gu, '') 
-    .trim();
-}
-
-function buildIndex() {
-  INDEX = FAQ.map(item => {
-    const vraagNorm = normalize(item.vraag);
-    const antwoordNorm = normalize(item.antwoord);
-
-    const kwJoined = Array.isArray(item.keywords)
-      ? item.keywords.join(' ; ')
-      : String(item.keywords || '');
-
-    const kwNorm = normalize(kwJoined);
-
-    const kwTokens = kwNorm
-      .split(/[;,\s]+/)
-      .map(s => s.trim())
-      .filter(Boolean);
-
-    const allText = vraagNorm + ' ' + antwoordNorm + ' ' + kwNorm;
-
-    // foutcodes detecteren
-    const codeMatches = kwJoined.match(/\b\d{4,6}\b/g) || [];
-    const codes = Array.from(new Set(codeMatches.map(c => c.trim())));
-
-    return {
-      raw: item,
-      vraagNorm,
-      antwoordNorm,
-      kwTokens,
-      allText,
-      codes
-    };
-  });
-
-  if (debugMode) {
-    $dbg.textContent =
-      "Debug mode actief\nFAQ items: " +
-      FAQ.length +
-      "\n\nEerste item:\n" +
-      JSON.stringify(FAQ[0], null, 2);
-  }
-}
-
-/* ================================================================
-    SLIMME MATCHING
-================================================================ */
-function getSuggestions(query, limit = 6) {
-  const normalizedQuery = normalize(query);
-
-  if (!normalizedQuery || normalizedQuery.length < 2) {
-    if (debugMode) $dbg.textContent = "Query te kort (min. 2 karakters)";
-    return [];
-  }
-
-  if (!INDEX.length) return [];
-
-  const tokens = normalizedQuery.split(/\s+/).filter(t => t.length >= 2);
-  const numericCodesInQuery = normalizedQuery.match(/\b\d{4,6}\b/g) || [];
-
-  const scored = INDEX.map(entry => {
-    let score = 0;
-    let matches = [];
-
-    numericCodesInQuery.forEach(code => {
-      if (entry.codes.includes(code) || entry.allText.includes(code)) {
-        score += 25;
-        matches.push('foutcode: ' + code);
+    async function loadFAQData() {
+      try {
+        const response = await fetch(JSON_URL);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        // Controleer of data een array is
+        if (!Array.isArray(data)) {
+          throw new Error('JSON data is geen array');
+        }
+        
+        FAQ = data;
+        console.log('FAQ data succesvol geladen:', FAQ.length, 'items');
+        
+        // Update de UI
+        $faqCount.textContent = FAQ.length;
+        renderChips([]);
+        
+        return true;
+      } catch (error) {
+        console.error('Fout bij het laden van FAQ data:', error);
+        
+        // Toon foutmelding aan gebruiker
+        $chips.innerHTML = `
+          <div class="error">
+            ❌ <b>Fout bij het laden van de FAQ data</b><br>
+            ${error.message}<br><br>
+            <small>Controleer of de URL correct is en probeer de pagina te verversen.</small>
+          </div>
+        `;
+        
+        return false;
       }
-    });
-
-    tokens.forEach(t => {
-      const isNumeric = /^\d+$/.test(t);
-      if (isNumeric) return;
-
-      if (entry.kwTokens.includes(t)) {
-        score += 8;
-        matches.push("kw: " + t);
-      } else if (entry.kwTokens.some(kw => kw.includes(t))) {
-        score += 4;
-        matches.push("kw~: " + t);
-      }
-
-      if (entry.vraagNorm.includes(t)) {
-        score += 3;
-        matches.push("vraag: " + t);
-      }
-
-      if (entry.antwoordNorm.includes(t)) {
-        score += 1;
-        matches.push("antwoord: " + t);
-      }
-    });
-
-    if (tokens.length > 1 && matches.length >= tokens.length) {
-      score += 5;
     }
 
-    return { row: entry.raw, score, matches };
-  });
+    // ===================================================================
+    // APPLICATIE CODE
+    // ===================================================================
+    
+    const $q = document.getElementById('q');
+    const $chips = document.getElementById('chips');
+    const $answer = document.getElementById('answer');
+    const $answerTitle = document.getElementById('answerTitle');
+    const $answerText = document.getElementById('answerText');
+    const $clear = document.getElementById('clear');
+    const $contact = document.getElementById('contact');
+    const $dbg = document.getElementById('dbg');
+    const $faqCount = document.getElementById('faqCount');
+    const $themeToggle = document.getElementById('themeToggle');
+    const $themeLabel = document.getElementById('themeLabel');
+    const $themeIcon = document.getElementById('themeIcon');
 
-  const results = scored
-    .filter(x => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit);
+    // ===== Dark / Light mode toggle =====
+    function detectInitialTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') {
+        return saved;
+      }
+      // Fallback op systeemvoorkeur
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    }
 
-  if (debugMode) {
-    $dbg.textContent =
-      'Gevonden: ' + results.length + ' suggesties\n\n' +
-      results.map(r =>
-        "Score " +
-        r.score.toFixed(1) +
-        ": " +
-        r.row.vraag +
-        "\n  → " +
-        r.matches.join(", ")
-      ).join("\n\n");
-  }
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark');
+        $themeIcon.textContent = '🌞';
+        $themeLabel.textContent = 'Donker';
+      } else {
+        document.body.classList.remove('dark');
+        $themeIcon.textContent = '🌙';
+        $themeLabel.textContent = 'Licht';
+      }
+    }
 
-  return results.map(x => x.row);
-}
+    let currentTheme = detectInitialTheme();
+    applyTheme(currentTheme);
 
-/* ================================================================
-    CHIP + ANTWOORD (onder chip)
-================================================================ */
-function renderChips(list) {
-  $chips.innerHTML = '';
-
-  if (list.length === 0) {
-    const span = document.createElement('div');
-    span.className = 'muted';
-    span.textContent = 'Geen suggesties gevonden…';
-    $chips.appendChild(span);
-    return;
-  }
-
-  list.forEach(row => {
-    const container = document.createElement('div');
-    container.style.width = '100%';
-
-    const chip = document.createElement('div');
-    chip.className = 'chip';
-    chip.textContent = '💡 ' + row.vraag;
-    chip.title = 'Klik om het antwoord te zien';
-
-    const answerBox = document.createElement('div');
-    answerBox.className = 'answer';
-    answerBox.style.display = 'none';
-
-    const answerTitle = document.createElement('div');
-    answerTitle.className = 'answer-title';
-    answerTitle.textContent = row.vraag;
-
-    const answerText = document.createElement('div');
-    answerText.innerHTML = row.antwoord || 'Geen antwoord beschikbaar.';
-
-    answerBox.appendChild(answerTitle);
-    answerBox.appendChild(answerText);
-
-    chip.addEventListener('click', () => {
-      document.querySelectorAll('.answer').forEach(a => {
-        if (a !== answerBox) a.style.display = 'none';
-      });
-
-      answerBox.style.display =
-        answerBox.style.display === 'none' ? 'block' : 'none';
+    $themeToggle.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', currentTheme);
+      applyTheme(currentTheme);
     });
 
-    container.appendChild(chip);
-    container.appendChild(answerBox);
-    $chips.appendChild(container);
-  });
-}
+    // Debug mode toggle (Ctrl+D)
+    let debugMode = false;
+    document.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key === 'd') {
+        e.preventDefault();
+        debugMode = !debugMode;
+        $dbg.style.display = debugMode ? 'block' : 'none';
+        if (debugMode) {
+          $dbg.textContent = 'Debug mode actief\nFAQ items: ' + FAQ.length + '\n\n' + 
+            (FAQ.length > 0 ? 'Eerste item:\n' + JSON.stringify(FAQ[0], null, 2) : 'Geen data geladen');
+        }
+      }
+    });
 
-/* ================================================================
-    INPUT HANDLING
-================================================================ */
-let debounceTimer;
+    function normalize(text) {
+      if (!text) return '';
+      return String(text)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '')
+        .trim();
+    }
 
-$q.addEventListener('input', () => {
-  clearTimeout(debounceTimer);
+    function getSuggestions(query, limit = 6) {
+      const normalizedQuery = normalize(query);
+      
+      if (!normalizedQuery || normalizedQuery.length < 2) {
+        if (debugMode) $dbg.textContent = 'Query te kort (min. 2 karakters)';
+        return [];
+      }
 
-  debounceTimer = setTimeout(() => {
-    const suggestions = getSuggestions($q.value);
-    renderChips(suggestions);
-  }, 200);
-});
+      const queryWords = normalizedQuery.split(/\s+/).filter(w => w.length >= 2);
+      
+      if (debugMode) console.log('Query woorden:', queryWords);
 
-$clear.addEventListener('click', () => {
-  $q.value = '';
-  $chips.innerHTML = '';
-  $q.focus();
-});
+      const scored = FAQ.map(row => {
+        const normalizedKeywords = normalize(row.keywords || '');
+        const normalizedVraag = normalize(row.vraag || '');
+        const normalizedAntwoord = normalize(row.antwoord || '');
+        const keywords = normalizedKeywords.split(/[;,]/).map(s => s.trim()).filter(Boolean);
+        
+        let score = 0;
+        const matches = [];
 
-/* ================================================================
-    CONTACT BUTTON
-================================================================ */
-$contact.addEventListener('click', () => {
-  const question = $q.value.trim();
-  const subject = "FAQ Vraag: " + (question || "Nieuwe vraag");
-  const body = question ? "Mijn vraag:\n\n" + question : "";
+        queryWords.forEach(qWord => {
+          keywords.forEach(kw => {
+            if (kw === qWord) {
+              score += 10;
+              matches.push(`exact: "${qWord}"`);
+            } else if (kw.includes(qWord)) {
+              score += 5;
+              matches.push(`partial: "${qWord}" in "${kw}"`);
+            } else if (qWord.includes(kw) && kw.length >= 3) {
+              score += 3;
+              matches.push(`contains: "${kw}"`);
+            }
+          });
 
-  window.location.href =
-    "mailto:support@compufit-be.cgm.com?subject=" +
-    encodeURIComponent(subject) +
-    "&body=" +
-    encodeURIComponent(body);
-});
+          if (normalizedVraag.includes(qWord)) {
+            score += 2;
+            matches.push(`in vraag: "${qWord}"`);
+          }
 
-/* ================================================================
-    DEBUGMODUS
-================================================================ */
-document.addEventListener('keydown', e => {
-  if (e.ctrlKey && e.key === 'd') {
-    e.preventDefault();
-    debugMode = !debugMode;
-    $dbg.style.display = debugMode ? 'block' : 'none';
-  }
-});
+          if (normalizedAntwoord.includes(qWord)) {
+            score += 0.5;
+          }
+        });
 
-</script>
+        if (queryWords.length > 1 && matches.length >= queryWords.length) {
+          score += 5;
+        }
 
+        return { row, score, matches };
+      });
+
+      const results = scored
+        .filter(x => x.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit);
+
+      if (debugMode) {
+        $dbg.textContent = `Gevonden: ${results.length} suggesties\n\n` +
+          results.map(r => `Score ${r.score.toFixed(1)}: ${r.row.vraag}\n  → ${r.matches.join(', ')}`).join('\n\n');
+      }
+
+      return results.map(x => x.row);
+    }
+
+    function renderChips(list) {
+      $chips.innerHTML = '';
+      
+      // Verberg het centrale antwoord element (we gebruiken het niet meer)
+      $answer.style.display = 'none';
+      
+      if (FAQ.length === 0) {
+        // Wacht op data
+        return;
+      }
+      
+      if (list.length === 0) {
+        const span = document.createElement('div');
+        span.className = 'muted';
+        span.textContent = 'Geen suggesties gevonden…';
+        $chips.appendChild(span);
+        return;
+      }
+
+      list.forEach(row => {
+        // Maak een container voor chip + antwoord
+        const container = document.createElement('div');
+        container.style.width = '100%';
+        
+        // Maak de chip
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.textContent = '💡 ' + row.vraag;
+        chip.title = 'Klik om het antwoord te zien';
+        
+        // Maak het antwoord element voor deze specifieke chip
+        const answerBox = document.createElement('div');
+        answerBox.className = 'answer';
+        answerBox.style.display = 'none';
+        
+        const answerTitle = document.createElement('div');
+        answerTitle.className = 'answer-title';
+        answerTitle.textContent = row.vraag;
+        
+        const answerText = document.createElement('div');
+        answerText.innerHTML = row.antwoord || 'Geen antwoord beschikbaar.';
+        
+        answerBox.appendChild(answerTitle);
+        answerBox.appendChild(answerText);
+        
+        // Click event: verberg alle andere antwoorden, toon dit antwoord
+        chip.addEventListener('click', () => {
+          // Verberg alle andere antwoorden
+          document.querySelectorAll('.answer').forEach(a => {
+            if (a !== answerBox) {
+              a.style.display = 'none';
+            }
+          });
+          
+          // Toggle dit antwoord
+          if (answerBox.style.display === 'none') {
+            answerBox.style.display = 'block';
+          } else {
+            answerBox.style.display = 'none';
+          }
+        });
+        
+        // Voeg chip en antwoord toe aan container
+        container.appendChild(chip);
+        container.appendChild(answerBox);
+        
+        // Voeg container toe aan chips div
+        $chips.appendChild(container);
+      });
+    }
+
+    let debounceTimer;
+    $q.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      $answer.style.display = 'none';
+      
+      debounceTimer = setTimeout(() => {
+        const suggestions = getSuggestions($q.value);
+        renderChips(suggestions);
+      }, 200);
+    });
+
+    $clear.addEventListener('click', () => {
+      $q.value = '';
+      $chips.innerHTML = '';
+      $answer.style.display = 'none';
+      renderChips([]);
+      $q.focus();
+    });
+
+    $contact.addEventListener('click', () => {
+      const question = $q.value.trim();
+      const subject = 'FAQ Vraag: ' + (question || 'Nieuwe vraag');
+      const body = question ? 'Mijn vraag:\n\n' + question : '';
+      
+      // Pas dit e-mailadres aan naar jouw support email
+      window.location.href = `mailto:support@jouwbedrijf.be?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    // ===================================================================
+    // INITIALISATIE: LAAD DATA EN START APPLICATIE
+    // ===================================================================
+    
+    loadFAQData().then(success => {
+      if (success) {
+        console.log('FAQ systeem geladen met', FAQ.length, 'vragen');
+      }
+    });
+  </script>
 </body>
 </html>
