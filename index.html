@@ -284,33 +284,60 @@ function renderChips(list) {
   list.forEach(row => {
     const container = document.createElement('div');
     container.style.width = '100%';
+    container.style.marginBottom = '8px';
 
     const chip = document.createElement('div');
     chip.className = 'chip';
-    chip.textContent = '💡 ' + row.vraag;
+    chip.innerHTML = '<span style="margin-right: 6px;">💡</span>' + row.vraag;
     chip.title = 'Klik om het antwoord te zien';
 
     const answerBox = document.createElement('div');
     answerBox.className = 'answer';
     answerBox.style.display = 'none';
+    answerBox.style.marginTop = '8px';
+    answerBox.style.padding = '16px';
+    answerBox.style.backgroundColor = 'var(--answer-bg, #f8f9fa)';
+    answerBox.style.borderRadius = '8px';
+    answerBox.style.border = '1px solid var(--border-color, #e0e0e0)';
 
     const answerTitle = document.createElement('div');
     answerTitle.className = 'answer-title';
     answerTitle.textContent = row.vraag;
+    answerTitle.style.fontWeight = 'bold';
+    answerTitle.style.marginBottom = '12px';
+    answerTitle.style.color = 'var(--text-color, #333)';
 
     const answerText = document.createElement('div');
     answerText.innerHTML = row.antwoord || 'Geen antwoord beschikbaar.';
+    answerText.style.lineHeight = '1.6';
+    answerText.style.color = 'var(--text-color, #555)';
 
     answerBox.appendChild(answerTitle);
     answerBox.appendChild(answerText);
 
     chip.addEventListener('click', () => {
+      // Sluit alle andere antwoorden
       document.querySelectorAll('.answer').forEach(a => {
-        if (a !== answerBox) a.style.display = 'none';
+        if (a !== answerBox) {
+          a.style.display = 'none';
+        }
       });
 
-      answerBox.style.display =
-        answerBox.style.display === 'none' ? 'block' : 'none';
+      // Toggle dit antwoord
+      if (answerBox.style.display === 'none') {
+        answerBox.style.display = 'block';
+        chip.style.backgroundColor = 'var(--chip-active-bg, #e3f2fd)';
+        chip.style.borderColor = 'var(--chip-active-border, #2196F3)';
+      } else {
+        answerBox.style.display = 'none';
+        chip.style.backgroundColor = '';
+        chip.style.borderColor = '';
+      }
+
+      // Scroll naar het antwoord
+      setTimeout(() => {
+        answerBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
     });
 
     container.appendChild(chip);
